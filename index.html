@@ -16,9 +16,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260604" />
+  <link rel="stylesheet" href="styles.css?v=20260605" />
 </head>
 <body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true"><div class="cursor-ring"></div></div>
 
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="nav">
@@ -78,6 +81,35 @@
   </div>
   <div id="heroBottom"></div>
 </section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Google Ads</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Redes Sociales</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">SEO</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Diseño Web</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Email Marketing</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Copywriting</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">100% Remoto</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Sin Permanencia</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Resultados Medibles</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Primera Consulta Gratis</span><span class="marquee-dot">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Google Ads</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Redes Sociales</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">SEO</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Diseño Web</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Email Marketing</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Copywriting</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">100% Remoto</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Sin Permanencia</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Resultados Medibles</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Primera Consulta Gratis</span><span class="marquee-dot">·</span>
+  </div>
+</div>
 
 <!-- ===================== STATS BAR ===================== -->
 <section class="stats-bar">
@@ -175,27 +207,39 @@
       <span class="section-label">Cómo trabajamos</span>
       <h2 class="section-title">Un proceso claro, sin sorpresas</h2>
     </div>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="process-number">01</div>
+    <div class="process-steps" id="processSteps">
+      <div class="process-step" data-step="0">
+        <div class="process-node">
+          <div class="process-node-ring" aria-hidden="true"></div>
+          <span class="process-number">01</span>
+        </div>
+        <div class="process-connector" aria-hidden="true"><div class="process-connector-fill"></div></div>
         <h3>Análisis</h3>
         <p>Estudiamos tu negocio, tu competencia y tus objetivos. Sin análisis, no hay estrategia.</p>
       </div>
-      <div class="process-connector" aria-hidden="true"></div>
-      <div class="process-step">
-        <div class="process-number">02</div>
+      <div class="process-step" data-step="1">
+        <div class="process-node">
+          <div class="process-node-ring" aria-hidden="true"></div>
+          <span class="process-number">02</span>
+        </div>
+        <div class="process-connector" aria-hidden="true"><div class="process-connector-fill"></div></div>
         <h3>Estrategia</h3>
         <p>Diseñamos un plan a medida con acciones concretas y métricas de éxito definidas.</p>
       </div>
-      <div class="process-connector" aria-hidden="true"></div>
-      <div class="process-step">
-        <div class="process-number">03</div>
+      <div class="process-step" data-step="2">
+        <div class="process-node">
+          <div class="process-node-ring" aria-hidden="true"></div>
+          <span class="process-number">03</span>
+        </div>
+        <div class="process-connector" aria-hidden="true"><div class="process-connector-fill"></div></div>
         <h3>Ejecución</h3>
         <p>Implementamos con rapidez y precisión. Reportes semanales para que siempre sepas qué pasa.</p>
       </div>
-      <div class="process-connector" aria-hidden="true"></div>
-      <div class="process-step">
-        <div class="process-number">04</div>
+      <div class="process-step" data-step="3">
+        <div class="process-node">
+          <div class="process-node-ring" aria-hidden="true"></div>
+          <span class="process-number">04</span>
+        </div>
         <h3>Resultados</h3>
         <p>Medimos, optimizamos y escalamos. Los resultados hablan por sí solos.</p>
       </div>
@@ -298,16 +342,16 @@
     </div>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">C</div>
+        <div class="team-avatar">CS</div>
         <h3>Carlos</h3>
         <span class="team-role">Co-fundador</span>
-        <p>Estrategia de marketing, paid media y desarrollo de negocio. Apasionado por los datos y los resultados medibles.</p>
+        <p class="team-location">· España</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">J</div>
+        <div class="team-avatar">JS</div>
         <h3>Jostin</h3>
         <span class="team-role">Co-fundador</span>
-        <p>Diseño, contenido y gestión de comunidades. Creativo con mentalidad analítica y obsesión por la calidad.</p>
+        <p class="team-location">· España</p>
       </div>
     </div>
   </div>
@@ -468,8 +512,8 @@
 </a>
 
 <!-- Scripts -->
-<script src="lib/manifest.js?v=20260604"></script>
-<script src="main.js?v=20260604"></script>
+<script src="lib/manifest.js?v=20260605"></script>
+<script src="main.js?v=20260605"></script>
 
 </body>
 </html>

@@ -88,6 +88,41 @@
     });
   }
 
+  /* ── Custom cursor ── */
+  var cursor = document.getElementById('cursor');
+  if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var cursorRing = cursor.querySelector('.cursor-ring');
+    var cx = -100, cy = -100;
+    cursor.classList.add('is-ready');
+    document.addEventListener('mousemove', function (e) {
+      cx = e.clientX; cy = e.clientY;
+      cursor.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+    }, { passive: true });
+    var hoverables = 'a, button, [data-cursor]';
+    document.querySelectorAll(hoverables).forEach(function (el) {
+      el.addEventListener('mouseenter', function () { cursor.classList.add('is-hovering'); });
+      el.addEventListener('mouseleave', function () { cursor.classList.remove('is-hovering'); });
+    });
+  }
+
+  /* ── Process step animation ── */
+  var processSteps = document.querySelectorAll('.process-step');
+  if (processSteps.length && window.IntersectionObserver) {
+    var stepDelay = [0, 300, 600, 900];
+    var processObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        processObserver.disconnect();
+        processSteps.forEach(function (step, i) {
+          setTimeout(function () {
+            step.classList.add('is-active');
+          }, stepDelay[i] || i * 300);
+        });
+      }
+    }, { threshold: 0.3 });
+    var firstStep = processSteps[0];
+    if (firstStep) processObserver.observe(firstStep);
+  }
+
   /* ── Count-up animation for stats ── */
   var statNumbers = document.querySelectorAll('.stat-number[data-target]');
   if (statNumbers.length && window.IntersectionObserver) {
