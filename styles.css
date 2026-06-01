@@ -738,11 +738,12 @@ ul {
   position: relative;
   width: 64px; height: 64px;
   border-radius: 50%;
-  background: rgba(34,184,130,.1);
+  background: #0e1e30;
   border: 2px solid rgba(34,184,130,.3);
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 24px;
   transition: border-color .4s ease, background .4s ease;
+  z-index: 1;
 }
 
 .process-node-ring {
@@ -754,7 +755,7 @@ ul {
 
 .process-step.is-active .process-node {
   border-color: #22B882;
-  background: rgba(34,184,130,.2);
+  background: #0e1e30;
   box-shadow: 0 0 24px rgba(34,184,130,.3);
 }
 .process-step.is-active .process-node-ring {
