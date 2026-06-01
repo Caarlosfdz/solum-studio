@@ -100,7 +100,7 @@ ul {
 
 /* ── Nav Logo ── */
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.nav-logo-img { height: 140px; width: auto; display: block; }
+.nav-logo-img { height: 130px; width: auto; display: block; }
 .nav-logo:hover { opacity: .88; transition: opacity .2s; }
 
 /* ── Nav ── */
@@ -121,7 +121,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 28px;
-  height: 68px;
+  height: 80px;
   overflow: visible;
 }
 
