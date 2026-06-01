@@ -99,10 +99,8 @@ ul {
 .btn-full { width: 100%; justify-content: center; }
 
 /* ── Nav Logo ── */
-.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-.nav-logo-text { display: flex; flex-direction: column; }
-.nav-logo-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.1; }
-.nav-logo-sub { font-size: .52rem; letter-spacing: .18em; color: rgba(255,255,255,.4); margin-top: 2px; text-transform: uppercase; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+.nav-logo-img { height: 44px; width: auto; display: block; }
 .nav-logo:hover { opacity: .88; transition: opacity .2s; }
 
 /* ── Nav ── */
