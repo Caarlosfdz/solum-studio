@@ -1217,3 +1217,13 @@ ul {
 @media (max-width: 480px) {
   .process-steps { grid-template-columns: 1fr; }
 }
+
+/* ── Service card upgrades ── */
+.service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.service-price { font-size: 1.4rem; font-weight: 700; color: #fff; margin: 8px 0 12px; }
+.service-price strong { font-size: 1.8rem; color: #22B882; }
+.service-price span { font-size: .85rem; color: rgba(255,255,255,.5); font-weight: 400; margin-left: 2px; }
+.service-includes-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 12px 0 20px; flex: 1; }
+.service-includes-list li { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: rgba(255,255,255,.75); }
+.service-cta { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: .9rem; font-weight: 600; text-decoration: none; transition: background .2s, border-color .2s; margin-top: auto; }
+.service-cta:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
