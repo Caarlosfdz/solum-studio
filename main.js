@@ -17,7 +17,6 @@
     }, { threshold: 0 });
     navObserver.observe(heroBottom);
   } else if (nav) {
-    // Fallback
     window.addEventListener('scroll', function () {
       if (window.scrollY > 60) {
         nav.classList.add('is-scrolled');
@@ -36,7 +35,6 @@
       nav.classList.toggle('mobile-open', !expanded);
     });
 
-    // Close on link click
     var mobileLinks = document.querySelectorAll('.nav-mobile a');
     mobileLinks.forEach(function (link) {
       link.addEventListener('click', function () {
@@ -44,6 +42,20 @@
         nav.classList.remove('mobile-open');
       });
     });
+  }
+
+  /* ── Reveal IntersectionObserver ── */
+  var reveals = document.querySelectorAll('.reveal, .reveal-scale');
+  if (reveals.length && window.IntersectionObserver) {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    reveals.forEach(function (el) { revealObs.observe(el); });
   }
 
   /* ── FAQ accordion ── */
@@ -56,7 +68,6 @@
     btn.addEventListener('click', function () {
       var isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-      // Close all
       faqItems.forEach(function (other) {
         var otherBtn = other.querySelector('.faq-question');
         var otherAnswer = other.querySelector('.faq-answer');
@@ -66,7 +77,6 @@
         }
       });
 
-      // Toggle current
       if (!isOpen) {
         btn.setAttribute('aria-expanded', 'true');
         answer.hidden = false;
@@ -91,12 +101,9 @@
   /* ── Custom cursor ── */
   var cursor = document.getElementById('cursor');
   if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    var cursorRing = cursor.querySelector('.cursor-ring');
-    var cx = -100, cy = -100;
     cursor.classList.add('is-ready');
     document.addEventListener('mousemove', function (e) {
-      cx = e.clientX; cy = e.clientY;
-      cursor.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+      cursor.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
     }, { passive: true });
     var hoverables = 'a, button, [data-cursor]';
     document.querySelectorAll(hoverables).forEach(function (el) {
@@ -140,21 +147,62 @@
         function tick(now) {
           var elapsed = now - start;
           var progress = Math.min(elapsed / duration, 1);
-          // ease out
           var eased = 1 - Math.pow(1 - progress, 3);
           var current = Math.round(eased * target);
           el.textContent = prefix + current + suffix;
-          if (progress < 1) {
-            requestAnimationFrame(tick);
-          }
+          if (progress < 1) { requestAnimationFrame(tick); }
         }
 
         requestAnimationFrame(tick);
       });
     }, { threshold: 0.5 });
 
-    statNumbers.forEach(function (el) {
-      statsObserver.observe(el);
+    statNumbers.forEach(function (el) { statsObserver.observe(el); });
+  }
+
+  /* ── Services carousel drag + progress bar ── */
+  var trackOuter = document.getElementById('services-track-outer');
+  if (trackOuter) {
+    var isDown = false, startX, scrollLeft;
+
+    trackOuter.addEventListener('mousedown', function (e) {
+      isDown = true;
+      startX = e.pageX - trackOuter.offsetLeft;
+      scrollLeft = trackOuter.scrollLeft;
+      trackOuter.style.cursor = 'grabbing';
+    });
+    trackOuter.addEventListener('mouseleave', function () {
+      isDown = false;
+      trackOuter.style.cursor = 'grab';
+    });
+    trackOuter.addEventListener('mouseup', function () {
+      isDown = false;
+      trackOuter.style.cursor = 'grab';
+    });
+    trackOuter.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - trackOuter.offsetLeft;
+      trackOuter.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    });
+
+    var fill = document.getElementById('progress-fill');
+    var label = document.getElementById('progress-label');
+    trackOuter.addEventListener('scroll', function () {
+      var max = trackOuter.scrollWidth - trackOuter.clientWidth;
+      var pct = max > 0 ? (trackOuter.scrollLeft / max * 100) : 0;
+      if (fill) fill.style.width = pct + '%';
+      var cards = trackOuter.querySelectorAll('.service-card-carousel');
+      var idx = Math.round(pct / 100 * (cards.length - 1)) + 1;
+      if (label) label.textContent = '0' + Math.min(idx, cards.length) + ' / 0' + cards.length;
+    }, { passive: true });
+  }
+
+  /* ── Back to top ── */
+  var backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
