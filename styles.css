@@ -99,8 +99,8 @@ ul {
 .btn-full { width: 100%; justify-content: center; }
 
 /* ── Nav Logo ── */
-.nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; justify-self: start; }
-.nav-logo-img { height: 130px; width: auto; display: block; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; margin-right: auto; }
+.nav-logo-img { height: 130px !important; width: auto !important; display: block; }
 .nav-logo:hover { opacity: .88; transition: opacity .2s; }
 
 /* ── Nav ── */
@@ -120,11 +120,12 @@ ul {
 .nav-inner {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
   overflow: visible;
+  padding-left: 0;
 }
 .nav-links { margin: 0 auto; }
-.nav-cta-wrap { margin-left: auto; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.nav-cta-wrap { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
 
 .nav-links {
   display: flex;
