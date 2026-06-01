@@ -30,18 +30,27 @@
 <nav class="nav" id="nav">
   <div class="nav-inner container">
     <a href="#" class="nav-logo" aria-label="Solum Studio">
-      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-        <rect x="3" y="3" width="32" height="32" rx="5" transform="rotate(45 19 19)" stroke="url(#logoGrad)" stroke-width="2.5"/>
-        <text x="19" y="23" text-anchor="middle" font-family="Sora,sans-serif" font-weight="800" font-size="13" fill="url(#logoGrad)">S</text>
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true">
         <defs>
-          <linearGradient id="logoGrad" x1="3" y1="3" x2="35" y2="35" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#22B882"/>
+          <linearGradient id="lgNav" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2EE8A0"/>
+            <stop offset="100%" stop-color="#0B6E4F"/>
+          </linearGradient>
+          <linearGradient id="lgNavS" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2EE8A0"/>
             <stop offset="100%" stop-color="#0B6E4F"/>
           </linearGradient>
         </defs>
+        <!-- Diamond border with rounded corners -->
+        <path d="M50 4 L96 50 L50 96 L4 50 Z" rx="6" stroke="url(#lgNav)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+        <!-- S mark — navy top piece (top-right diagonal) -->
+        <path d="M38 32 L62 32 Q70 32 70 40 L70 48 Q70 54 62 54 L46 54" stroke="#0B1829" stroke-width="11" stroke-linecap="round" fill="none"/>
+        <!-- S mark — green bottom piece (bottom-left diagonal) -->
+        <path d="M62 68 L38 68 Q30 68 30 60 L30 52 Q30 46 38 46 L54 46" stroke="url(#lgNavS)" stroke-width="11" stroke-linecap="round" fill="none"/>
       </svg>
       <div class="nav-logo-text">
-        <span class="nav-logo-name"><span style="color:#fff">Solum</span> <span style="color:#22B882">Studio</span></span>
+        <span class="nav-logo-name"><span style="color:#fff;font-weight:700;">Solum</span><span style="color:#22B882;font-weight:700;"> Studio</span></span>
+        <span class="nav-logo-sub">AGENCIA DE MARKETING</span>
       </div>
     </a>
     <ul class="nav-links" role="list">
@@ -911,18 +920,24 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="#" class="nav-logo" aria-label="Solum Studio">
-          <svg width="32" height="32" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-            <rect x="3" y="3" width="32" height="32" rx="5" transform="rotate(45 19 19)" stroke="url(#footerGrad)" stroke-width="2.5"/>
-            <text x="19" y="23" text-anchor="middle" font-family="Sora,sans-serif" font-weight="800" font-size="13" fill="url(#footerGrad)">S</text>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true">
             <defs>
-              <linearGradient id="footerGrad" x1="3" y1="3" x2="35" y2="35" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#22B882"/>
+              <linearGradient id="lgFt" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2EE8A0"/>
+                <stop offset="100%" stop-color="#0B6E4F"/>
+              </linearGradient>
+              <linearGradient id="lgFtS" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2EE8A0"/>
                 <stop offset="100%" stop-color="#0B6E4F"/>
               </linearGradient>
             </defs>
+            <path d="M50 4 L96 50 L50 96 L4 50 Z" stroke="url(#lgFt)" stroke-width="5" fill="none" stroke-linejoin="round"/>
+            <path d="M38 32 L62 32 Q70 32 70 40 L70 48 Q70 54 62 54 L46 54" stroke="rgba(255,255,255,0.15)" stroke-width="11" stroke-linecap="round" fill="none"/>
+            <path d="M62 68 L38 68 Q30 68 30 60 L30 52 Q30 46 38 46 L54 46" stroke="url(#lgFtS)" stroke-width="11" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="nav-logo-text">
-            <span class="nav-logo-name"><span style="color:#fff">Solum</span> <span style="color:#22B882">Studio</span></span>
+            <span class="nav-logo-name"><span style="color:#fff;font-weight:700;">Solum</span><span style="color:#22B882;font-weight:700;"> Studio</span></span>
+            <span class="nav-logo-sub">AGENCIA DE MARKETING</span>
           </div>
         </a>
         <p>Resultados reales. Sin excusas.<br>Agencia de marketing digital para negocios locales espa&ntilde;oles.</p>
