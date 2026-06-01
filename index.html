@@ -4,1066 +4,472 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solum Studio — Marketing Digital · Resultados reales. Sin excusas.</title>
-  <meta name="description" content="Agencia de marketing digital 100% remota para negocios locales españoles. Meta Ads, redes sociales, SEO, diseño web y más. Primera consulta gratis." />
-  <meta name="theme-color" content="#071628" />
+  <meta name="description" content="Agencia de marketing digital 100% remota. Meta Ads, redes sociales, SEO, diseño web y más. Primera consulta gratis." />
+  <meta name="theme-color" content="#0B1829" />
+  <meta property="og:title" content="Solum Studio — Resultados reales. Sin excusas." />
+  <meta property="og:description" content="Agencia de marketing digital 100% remota. Primera consulta gratis." />
+  <meta property="og:type" content="website" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260603" />
-
-  <!-- Favicon inline SVG -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/logo/logo-symbol.svg" />
+  <link rel="stylesheet" href="styles.css?v=20260604" />
 </head>
 <body>
 
-<!-- Skip link -->
-<a href="#main" class="skip-link">Ir al contenido</a>
-
-<!-- Aurora background -->
-<div id="aurora" aria-hidden="true">
-  <div class="aurora-blob"></div>
-  <div class="aurora-blob"></div>
-</div>
-<div class="noise-layer" aria-hidden="true"></div>
-
-<!-- Custom cursor (desktop only) -->
-<div class="cursor" id="cursor" aria-hidden="true">
-  <div class="cursor-ring"></div>
-  <span class="cursor-label" id="cursor-label"></span>
-</div>
-
-<!-- Side label -->
-<aside class="side-label" aria-hidden="true">
-  <span class="dot"></span>
-  SOLUM STUDIO · MARKETING DIGITAL · 100% REMOTO
-</aside>
-
-<!-- ===================== SPLASH ===================== -->
-<div id="splash" data-splash aria-hidden="true">
-  <div class="splash-letters" id="splash-letters" aria-label="Solum Studio"></div>
-  <p class="splash-tagline">Resultados reales. Sin excusas.</p>
-  <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
-</div>
-
 <!-- ===================== NAV ===================== -->
-<header id="nav" role="banner">
-  <div class="nav-inner">
-    <!-- Logo -->
-    <a href="#hero" class="nav-logo" aria-label="Solum Studio — inicio">
-      <svg viewBox="0 0 260 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="4" y="4" width="30" height="30" rx="3" transform="rotate(45 19 19)" stroke="#22B882" stroke-width="2"/>
-        <text x="48" y="30" font-family="Sora,sans-serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.5">Solum</text>
-        <text x="134" y="30" font-family="Sora,sans-serif" font-weight="400" font-size="24" fill="#22B882" letter-spacing="-0.3">Studio</text>
+<nav class="nav" id="nav">
+  <div class="nav-inner container">
+    <a href="#" class="nav-logo" aria-label="Solum Studio inicio">
+      <svg class="nav-logo-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M11 1L21 11L11 21L1 11Z" fill="#22B882"/>
       </svg>
+      <span>Solum Studio</span>
     </a>
-
-    <!-- Desktop links -->
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#about"><span class="num">01</span>Nosotros</a>
-      <a href="#services"><span class="num">02</span>Servicios</a>
-      <a href="#process"><span class="num">03</span>Proceso</a>
-      <a href="#testimonials"><span class="num">04</span>Resultados</a>
-      <a href="#contact"><span class="num">07</span>Contacto</a>
-    </nav>
-
-    <!-- CTA desktop -->
-    <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="nav-cta" target="_blank" rel="noopener" data-cursor="reservar">Consulta gratis →</a>
-
-    <!-- Burger -->
-    <button class="nav-burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+    <ul class="nav-links" role="list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/34632235491?text=Hola%2C%20quiero%20una%20consulta%20gratis" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Consulta gratis →</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
-</header>
-
-<!-- Mobile nav -->
-<nav class="nav-mobile" id="nav-mobile" aria-label="Menú móvil">
-  <a href="#about" class="nav-mobile-link">Nosotros</a>
-  <a href="#services" class="nav-mobile-link">Servicios</a>
-  <a href="#process" class="nav-mobile-link">Proceso</a>
-  <a href="#testimonials" class="nav-mobile-link">Resultados</a>
-  <a href="#team" class="nav-mobile-link">Equipo</a>
-  <a href="#contact" class="nav-mobile-link">Contacto</a>
-  <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="nav-cta" target="_blank" rel="noopener">Consulta gratis →</a>
+  <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/34632235491?text=Hola%2C%20quiero%20una%20consulta%20gratis" class="btn btn-primary" target="_blank" rel="noopener">Consulta gratis →</a>
+  </div>
 </nav>
 
-<!-- ===================== MAIN ===================== -->
-<main id="main">
-
-  <!-- ===== HERO ===== -->
-  <section id="hero" aria-label="Hero principal">
-    <canvas id="particles-canvas" aria-hidden="true"></canvas>
-    <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="hero-inner">
-      <!-- Left column -->
-      <div class="hero-left">
-        <div class="hero-badge reveal">
-          <span class="dot" aria-hidden="true"></span>
-          Agencia activa · España
-        </div>
-        <p class="hero-kicker reveal stagger-1">MARKETING DIGITAL · 100% REMOTO · ESPAÑA</p>
-
-        <h1 class="hero-title">
-          <span class="reveal stagger-2">Más clientes para</span>
-          <span class="hero-title-offset reveal stagger-3">tu negocio.</span>
-          <span class="reveal stagger-4"><em class="hero-highlight">Resultados reales.</em></span>
-        </h1>
-
-        <p class="hero-desc reveal stagger-5">
-          Gestionamos tu presencia digital de principio a fin — anuncios, redes, SEO y contenido — con resultados medibles desde el primer mes.
-        </p>
-
-        <div class="hero-btns reveal">
-          <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="btn-primary" target="_blank" rel="noopener" data-cursor="reservar">
-            Pide tu análisis gratuito →
-          </a>
-          <a href="#services" class="btn-ghost">Ver servicios</a>
-        </div>
-
-        <div class="hero-trust reveal">
-          <span><span class="check" aria-hidden="true">✓</span> Primera consulta gratis</span>
-          <span><span class="check" aria-hidden="true">✓</span> Sin permanencia</span>
-          <span><span class="check" aria-hidden="true">✓</span> 100% remoto</span>
-          <span><span class="check" aria-hidden="true">✓</span> Resultados medibles</span>
-        </div>
-      </div>
-
-      <!-- Right column -->
-      <div class="hero-right">
-        <div class="hero-card-main reveal-scale">
-          <div class="hero-card-badge">↑ +567% ROI</div>
-          <p class="hero-card-quote">"Invertimos 300€ en Meta Ads y el primer mes recuperamos más de 2.000€ en ventas."</p>
-          <div class="hero-card-author">
-            <div class="hero-avatar" aria-hidden="true">JL</div>
-            <div>
-              <div class="hero-card-name">Javier López</div>
-              <div class="hero-card-meta">Tienda online · Málaga</div>
-              <div class="hero-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-mini-cards reveal-scale stagger-1">
-          <div class="hero-mini-card">
-            <div class="hero-mini-val">3x</div>
-            <div class="hero-mini-lbl">Retorno medio</div>
-          </div>
-          <div class="hero-mini-card">
-            <div class="hero-mini-val">+40</div>
-            <div class="hero-mini-lbl">Negocios</div>
-          </div>
-          <div class="hero-mini-card">
-            <div class="hero-mini-val">48h</div>
-            <div class="hero-mini-lbl">1ª propuesta</div>
-          </div>
-        </div>
-
-        <div class="hero-pill reveal-scale stagger-2">
-          <span class="dot" aria-hidden="true"></span>
-          <p class="hero-pill-text">Primera consulta 100% gratuita — sin compromiso</p>
-          <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="hero-pill-btn" target="_blank" rel="noopener">Reservar →</a>
-        </div>
-      </div>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">🚀 Agencia de marketing digital &nbsp;·&nbsp; 100% remoto</div>
+    <h1 class="hero-title">
+      Más clientes.<br>
+      <em class="accent">Más ventas.</em><br>
+      Menos excusas.
+    </h1>
+    <p class="hero-subtitle">Ayudamos a negocios a crecer con estrategias de marketing digital que generan resultados reales — sin humo, sin contratos eternos.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/34632235491?text=Hola%2C%20quiero%20una%20consulta%20gratis" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.521 5.855L0 24l6.335-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.565 9.565 0 01-4.902-1.347l-.352-.208-3.758.891.939-3.658-.228-.373A9.572 9.572 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4S21.6 6.698 21.6 12 17.302 21.6 12 21.6z"/></svg>
+        Hablar por WhatsApp
+      </a>
+      <a href="#servicios" class="btn btn-ghost btn-lg">Ver servicios ↓</a>
     </div>
-  </section>
-
-  <!-- ===== MARQUEE 1 ===== -->
-  <div class="marquee-section marquee-mask" aria-hidden="true">
-    <div class="marquee-track row-1">
-      <span class="marquee-item">Meta Ads</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">SEO</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Gestión de Redes</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Diseño Web</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Email Marketing</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Copywriting</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Meta Ads</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">SEO</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Gestión de Redes</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Diseño Web</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Email Marketing</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Copywriting</span><span class="marquee-sep">·</span>
+    <div class="hero-trust">
+      <span>✓ Sin permanencia</span>
+      <span>✓ 100% remoto</span>
+      <span>✓ Primera consulta gratis</span>
     </div>
   </div>
-  <div class="marquee-section marquee-mask" aria-hidden="true">
-    <div class="marquee-track row-2">
-      <span class="marquee-item">100% Remoto</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Sin Permanencia</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Resultados Medibles</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Primera Consulta Gratis</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Negocios Locales</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">España</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">100% Remoto</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Sin Permanencia</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Resultados Medibles</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Primera Consulta Gratis</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">Negocios Locales</span><span class="marquee-sep">·</span>
-      <span class="marquee-item">España</span><span class="marquee-sep">·</span>
-    </div>
-  </div>
+  <div id="heroBottom"></div>
+</section>
 
-  <!-- ===== STATS ===== -->
-  <section id="stats" aria-label="Estadísticas">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-num"><em data-count-to="40" data-prefix="+">+40</em></div>
-          <p class="stat-label">Negocios ayudados en España</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><em data-count-to="48" data-suffix="h">48h</em></div>
-          <p class="stat-label">Primera propuesta sin compromiso</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><em data-count-to="3" data-suffix="x">3x</em></div>
-          <p class="stat-label">Retorno medio en campañas</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num"><em data-count-to="100" data-suffix="%">100%</em></div>
-          <p class="stat-label">Transparencia en resultados</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT — sección 01 ===== -->
-  <section id="about" class="section" aria-labelledby="about-title">
-    <span class="section-num" aria-hidden="true">01</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">Quiénes somos</span>
-      </div>
-      <div class="about-grid">
-        <div>
-          <h2 id="about-title" class="section-title reveal">
-            No somos una agencia grande.<br>
-            <em>Somos los que trabajan tu cuenta.</em>
-          </h2>
-          <p class="about-lead reveal">
-            Somos Carlos y Jostin, y nos encargamos de todo por igual — desde la estrategia hasta la ejecución. Sin intermediarios, sin gran estructura de agencia. Directamente nosotros gestionando tu marketing.
-          </p>
-          <p class="about-support reveal">
-            Dos personas con experiencia real en Meta Ads, gestión de redes y creación de contenido. Tú tienes interlocutores directos que conocen tu negocio, no un account manager que cambia cada trimestre.
-          </p>
-
-          <div class="about-diffs">
-            <div class="diff-item reveal stagger-1">
-              <div class="diff-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                  <polyline points="2,10 7,15 16,4"/>
-                </svg>
-              </div>
-              <div>
-                <p class="diff-title">Resultados medibles</p>
-                <p class="diff-desc">Cada euro tiene seguimiento. Informes claros cada mes.</p>
-              </div>
-            </div>
-            <div class="diff-item reveal stagger-2">
-              <div class="diff-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                  <path d="M9 2a5 5 0 100 10A5 5 0 009 2z"/><path d="M9 12v4M6 16h6"/>
-                </svg>
-              </div>
-              <div>
-                <p class="diff-title">Trato directo</p>
-                <p class="diff-desc">Hablas con Carlos o Jostin. Siempre.</p>
-              </div>
-            </div>
-            <div class="diff-item reveal stagger-3">
-              <div class="diff-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                  <circle cx="9" cy="9" r="7"/><path d="M9 5v4l3 2"/>
-                </svg>
-              </div>
-              <div>
-                <p class="diff-title">100% remoto</p>
-                <p class="diff-desc">Toda España sin reuniones presenciales.</p>
-              </div>
-            </div>
-            <div class="diff-item reveal stagger-4">
-              <div class="diff-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                  <rect x="3" y="5" width="12" height="10" rx="2"/><path d="M12 5V4a3 3 0 00-6 0v1"/>
-                </svg>
-              </div>
-              <div>
-                <p class="diff-title">Sin permanencia</p>
-                <p class="diff-desc">Mes a mes. Te quedas porque funciona.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-aside">
-          <div class="team-card reveal-scale">
-            <div class="team-avatar" aria-hidden="true">CS</div>
-            <div>
-              <p class="team-name">Carlos</p>
-              <p class="team-role">Co-fundador</p>
-              <p class="team-focus">Meta Ads, gestión de redes, estrategia de contenido y captación de clientes.</p>
-              <p class="team-badge">España</p>
-            </div>
-          </div>
-          <div class="team-card reveal-scale stagger-1">
-            <div class="team-avatar" aria-hidden="true">JS</div>
-            <div>
-              <p class="team-name">Jostin</p>
-              <p class="team-role">Co-fundador</p>
-              <p class="team-focus">Operaciones, SEO, diseño web y coordinación de proyectos. Orientado a resultados.</p>
-              <p class="team-badge">España</p>
-            </div>
-          </div>
-          <div class="about-meta reveal-scale stagger-2">
-            <p class="about-meta-label">EST · 2026 · ESPAÑA</p>
-            <p class="about-meta-val">Solum Studio · 100% Remoto</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES — sección 02 ===== -->
-  <section id="services" class="section section-bg-2" aria-labelledby="services-title">
-    <div class="services-header">
-      <div class="container">
-        <span class="section-num" aria-hidden="true">02</span>
-        <div class="eyebrow">
-          <div class="eyebrow-line" aria-hidden="true"></div>
-          <span class="eyebrow-text">Servicios</span>
-        </div>
-        <h2 id="services-title" class="section-title reveal">Seis servicios.<br><em>Un solo objetivo.</em></h2>
-      </div>
-    </div>
-
-    <div class="services-scroll-wrap">
-      <div class="services-track-outer" id="services-track-outer" role="region" aria-label="Carrusel de servicios">
-        <div class="services-track" id="services-track">
-
-          <!-- 01 Meta Ads -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#22B882,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">01</span>
-              <span class="service-cat" style="color:#22B882;border-color:rgba(34,184,130,.4)">ADS</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round">
-                <polyline points="6,36 18,22 28,30 42,10"/>
-                <polyline points="38,10 42,10 42,14"/>
-              </svg>
-            </div>
-            <h3 class="service-name">Meta Ads &amp; Google Ads</h3>
-            <p class="service-sub">Tu inversión, multiplicada.</p>
-            <p class="service-desc">Campañas de pago diseñadas para conseguir clientes reales, no solo clics. Seguimiento de conversiones, A/B testing de creatividades y optimización semanal.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Estrategia de campaña</li>
-                <li>Creatividades y copies</li>
-                <li>Seguimiento de conversiones</li>
-                <li>Optimización continua</li>
-                <li>Informe mensual</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 02 Redes -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#2E78C7,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">02</span>
-              <span class="service-cat" style="color:#2E78C7;border-color:rgba(46,120,199,.4)">SOCIAL</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#2E78C7" stroke-width="1.5" stroke-linecap="round">
-                <circle cx="24" cy="24" r="4"/>
-                <circle cx="8" cy="16" r="3"/><circle cx="40" cy="16" r="3"/>
-                <circle cx="8" cy="36" r="3"/><circle cx="40" cy="36" r="3"/>
-                <line x1="11" y1="16" x2="20" y2="22"/><line x1="37" y1="16" x2="28" y2="22"/>
-                <line x1="11" y1="36" x2="20" y2="26"/><line x1="37" y1="36" x2="28" y2="26"/>
-              </svg>
-            </div>
-            <h3 class="service-name">Gestión de Redes Sociales</h3>
-            <p class="service-sub">Presencia que convierte.</p>
-            <p class="service-desc">Contenido con estrategia detrás — no posts por rellenar. Calendario editorial, diseño visual, gestión de comunidad y crecimiento orgánico.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Estrategia de contenido</li>
-                <li>Diseño de publicaciones</li>
-                <li>Calendario editorial</li>
-                <li>Gestión de comunidad</li>
-                <li>Análisis mensual</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 03 SEO -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#22B882,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">03</span>
-              <span class="service-cat" style="color:#22B882;border-color:rgba(34,184,130,.4)">SEO</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round">
-                <circle cx="22" cy="22" r="12"/>
-                <circle cx="22" cy="22" r="5"/>
-                <line x1="30" y1="30" x2="40" y2="40"/>
-              </svg>
-            </div>
-            <h3 class="service-name">SEO y Posicionamiento</h3>
-            <p class="service-sub">Que te encuentren primero.</p>
-            <p class="service-desc">Aparecer en Google cuando tus clientes buscan lo que vendes, sin pagar por cada clic. Posicionamiento orgánico y local en Google Maps.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Auditoría técnica SEO</li>
-                <li>Optimización on-page</li>
-                <li>Contenido SEO</li>
-                <li>Google My Business</li>
-                <li>Link building</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 04 Web -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#2E78C7,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">04</span>
-              <span class="service-cat" style="color:#2E78C7;border-color:rgba(46,120,199,.4)">WEB</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#2E78C7" stroke-width="1.5" stroke-linecap="round">
-                <rect x="6" y="10" width="36" height="28" rx="3"/>
-                <line x1="6" y1="18" x2="42" y2="18"/>
-                <line x1="16" y1="26" x2="32" y2="26"/>
-                <line x1="16" y1="32" x2="26" y2="32"/>
-              </svg>
-            </div>
-            <h3 class="service-name">Diseño Web</h3>
-            <p class="service-sub">Tu primer comercial, 24/7.</p>
-            <p class="service-desc">Webs profesionales y rápidas orientadas a convertir visitantes en clientes. Diseño a medida, no plantillas genéricas.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Diseño a medida</li>
-                <li>Responsive móvil</li>
-                <li>Optimización velocidad</li>
-                <li>SEO técnico básico</li>
-                <li>Formularios y CTAs</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 05 Copy -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#22B882,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">05</span>
-              <span class="service-cat" style="color:#22B882;border-color:rgba(34,184,130,.4)">COPY</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round">
-                <path d="M36 8L40 12L18 34L10 36L12 28L34 6z"/>
-                <line x1="30" y1="14" x2="34" y2="18"/>
-              </svg>
-            </div>
-            <h3 class="service-name">Copywriting &amp; Contenido</h3>
-            <p class="service-sub">Palabras que venden.</p>
-            <p class="service-desc">Textos orientados a conversión para web, anuncios, emails y redes. No relleno — copy que trabaja para ti.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Copy web</li>
-                <li>Textos para anuncios</li>
-                <li>Emails de venta</li>
-                <li>Posts para redes</li>
-                <li>Descripciones de producto</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 06 Email -->
-          <article class="service-card" data-cursor="ver">
-            <div class="service-card-glow" style="background:radial-gradient(circle,#2E78C7,transparent)" aria-hidden="true"></div>
-            <div class="service-num-wrap">
-              <span class="service-num">06</span>
-              <span class="service-cat" style="color:#2E78C7;border-color:rgba(46,120,199,.4)">EMAIL</span>
-            </div>
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="#2E78C7" stroke-width="1.5" stroke-linecap="round">
-                <rect x="6" y="12" width="36" height="26" rx="3"/>
-                <polyline points="6,14 24,26 42,14"/>
-                <path d="M38 10c2 0 4 2 4 4" stroke-dasharray="3 2"/>
-              </svg>
-            </div>
-            <h3 class="service-name">Email Marketing</h3>
-            <p class="service-sub">Tu cliente ya te conoce. Recuérdatelo.</p>
-            <p class="service-desc">Secuencias automáticas, newsletters y flujos de venta que mantienen a tu cliente pensando en ti entre compra y compra.</p>
-            <div class="service-includes">
-              <p class="service-includes-title">Incluye</p>
-              <ul>
-                <li>Estrategia de email</li>
-                <li>Secuencias automáticas</li>
-                <li>Diseño de newsletters</li>
-                <li>Segmentación</li>
-                <li>Métricas y optimización</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
-      </div>
-      <div class="services-progress container">
-        <span class="progress-label" id="progress-label">01 / 06</span>
-        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-      </div>
-    </div>
-
-    <!-- Tools marquee -->
-    <div class="marquee-section marquee-mask services-marquee" aria-hidden="true">
-      <div class="marquee-track row-2">
-        <span class="marquee-item">Meta</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">WordPress</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Canva</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Mailchimp</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">SEMrush</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Google Analytics</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">ActiveCampaign</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Hotjar</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Ahrefs</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Google My Business</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Meta</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">WordPress</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Canva</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">Mailchimp</span><span class="marquee-sep">·</span>
-        <span class="marquee-item">SEMrush</span><span class="marquee-sep">·</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROCESS — sección 03 ===== -->
-  <section id="process" class="section" aria-labelledby="process-title">
-    <span class="section-num" aria-hidden="true">03</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">Cómo trabajamos</span>
-      </div>
-      <h2 id="process-title" class="section-title reveal">Cuatro pasos.<br><em>Sin complicaciones.</em></h2>
-
-      <div style="position:relative; margin-top: 3rem;">
-        <div class="process-connector" aria-hidden="true">
-          <div class="process-connector-fill reveal" id="process-line"></div>
-        </div>
-        <div class="process-grid">
-          <div class="process-step reveal stagger-1" data-process-step>
-            <div class="process-node"><span class="node-num">01</span></div>
-            <h3 class="process-title">Consulta gratuita</h3>
-            <p class="process-desc">Analizamos tu negocio, te decimos exactamente qué está fallando y cómo arreglarlo. Llamada de 20-30 min, sin coste y sin compromiso.</p>
-          </div>
-          <div class="process-step reveal stagger-2" data-process-step>
-            <div class="process-node"><span class="node-num">02</span></div>
-            <h3 class="process-title">Propuesta a medida</h3>
-            <p class="process-desc">Sin plantillas genéricas. Estrategia específica para tu sector, tu competencia y tus objetivos concretos. En 48h tienes la propuesta.</p>
-          </div>
-          <div class="process-step reveal stagger-3" data-process-step>
-            <div class="process-node"><span class="node-num">03</span></div>
-            <h3 class="process-title">Ejecución rápida</h3>
-            <p class="process-desc">Todo en marcha en 72h máximo. Informes claros desde el primer día. Tú siempre sabes qué estamos haciendo y por qué.</p>
-          </div>
-          <div class="process-step reveal stagger-4" data-process-step>
-            <div class="process-node"><span class="node-num">04</span></div>
-            <h3 class="process-title">Optimización continua</h3>
-            <p class="process-desc">Analizamos los datos mes a mes y mejoramos constantemente. Lo que no funciona, lo cambiamos. Sin excusas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS — sección 04 ===== -->
-  <section id="testimonials" class="section section-bg-2" aria-labelledby="testi-title">
-    <span class="section-num" aria-hidden="true">04</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">Lo que dicen</span>
-      </div>
-      <h2 id="testi-title" class="section-title reveal">Negocios que ya<br><em>lo están notando.</em></h2>
-    </div>
-
-    <div class="testi-rows" aria-label="Testimonios de clientes">
-
-      <div class="testi-row marquee-mask">
-        <div class="testi-track">
-          <!-- row 1: 1,2,3 -->
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info">
-                <div class="testi-avatar" aria-hidden="true">MR</div>
-                <div><p class="testi-name">María R.</p><p class="testi-meta">Clínica estética · Sevilla</p></div>
-              </div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Llevábamos meses sin resultados en redes. En seis semanas con Solum triplicamos las consultas."</p>
-            <span class="testi-badge">+200% consultas</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info">
-                <div class="testi-avatar" aria-hidden="true">JL</div>
-                <div><p class="testi-name">Javier L.</p><p class="testi-meta">Tienda online · Málaga</p></div>
-              </div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Invertimos 300€ en Meta Ads y el primer mes recuperamos más de 2.000€. Transparencia total desde el día uno."</p>
-            <span class="testi-badge">+567% ROI</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info">
-                <div class="testi-avatar" aria-hidden="true">AG</div>
-                <div><p class="testi-name">Antonio G.</p><p class="testi-meta">Fontanería · Sevilla</p></div>
-              </div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Ahora somos los primeros en Google de nuestra zona. Las llamadas directas subieron un 60% en tres meses."</p>
-            <span class="testi-badge">+60% llamadas</span>
-          </article>
-          <!-- duplicates for loop -->
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">MR</div><div><p class="testi-name">María R.</p><p class="testi-meta">Clínica estética · Sevilla</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Llevábamos meses sin resultados en redes. En seis semanas con Solum triplicamos las consultas."</p>
-            <span class="testi-badge">+200% consultas</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">JL</div><div><p class="testi-name">Javier L.</p><p class="testi-meta">Tienda online · Málaga</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Invertimos 300€ en Meta Ads y el primer mes recuperamos más de 2.000€. Transparencia total."</p>
-            <span class="testi-badge">+567% ROI</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">AG</div><div><p class="testi-name">Antonio G.</p><p class="testi-meta">Fontanería · Sevilla</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Ahora somos los primeros en Google de nuestra zona. Las llamadas directas subieron un 60%."</p>
-            <span class="testi-badge">+60% llamadas</span>
-          </article>
-        </div>
-      </div>
-
-      <div class="testi-row marquee-mask">
-        <div class="testi-track">
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">LM</div><div><p class="testi-name">Laura M.</p><p class="testi-meta">Peluquería · Granada</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Nunca había tenido web ni redes serias. En un mes tenía los dos y la agenda llena por primera vez."</p>
-            <span class="testi-badge">Agenda completa</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">MS</div><div><p class="testi-name">Marcos S.</p><p class="testi-meta">Restaurante · Huelva</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"El contenido que nos hacen parece de marca grande. Mis clientes me preguntan quién lleva las redes. Solum."</p>
-            <span class="testi-badge">×3 seguidores</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">CV</div><div><p class="testi-name">Carmen V.</p><p class="testi-meta">Academia inglés · Jerez</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Las campañas de Google nos trajeron 18 nuevos alumnos en el primer mes. Nunca habíamos probado publicidad online."</p>
-            <span class="testi-badge">18 alumnos nuevos</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">LM</div><div><p class="testi-name">Laura M.</p><p class="testi-meta">Peluquería · Granada</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Nunca había tenido web ni redes serias. En un mes tenía los dos y la agenda llena."</p>
-            <span class="testi-badge">Agenda completa</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">MS</div><div><p class="testi-name">Marcos S.</p><p class="testi-meta">Restaurante · Huelva</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"El contenido que nos hacen parece de marca grande. Mis clientes preguntan quién lleva las redes."</p>
-            <span class="testi-badge">×3 seguidores</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">CV</div><div><p class="testi-name">Carmen V.</p><p class="testi-meta">Academia inglés · Jerez</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Las campañas de Google nos trajeron 18 nuevos alumnos en el primer mes."</p>
-            <span class="testi-badge">18 alumnos nuevos</span>
-          </article>
-        </div>
-      </div>
-
-      <div class="testi-row marquee-mask">
-        <div class="testi-track">
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">RP</div><div><p class="testi-name">Rafael P.</p><p class="testi-meta">Taller mecánico · Algeciras</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Pensaba que el marketing digital no era para mí. Ahora tengo presencia real y clientes que me encuentran solos."</p>
-            <span class="testi-badge">Primero en Maps</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">ST</div><div><p class="testi-name">Sofía T.</p><p class="testi-meta">Fisioterapeuta · Córdoba</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"En dos semanas de anuncios recuperé la inversión. Llevan mi marketing como si fuera su propio negocio."</p>
-            <span class="testi-badge">ROI positivo sem. 2</span>
-          </article>
-          <article class="testi-card" data-cursor="leer">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar" aria-hidden="true">DF</div><div><p class="testi-name">Diego F.</p><p class="testi-meta">Gestoría · Almería</p></div></div>
-              <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Lo que más valoro es que hablas siempre con la misma persona. Trato directo, resultados directos."</p>
-            <span class="testi-badge">+40% contactos</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">RP</div><div><p class="testi-name">Rafael P.</p><p class="testi-meta">Taller mecánico · Algeciras</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Pensaba que el marketing digital no era para mí. Ahora tengo presencia real."</p>
-            <span class="testi-badge">Primero en Maps</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">ST</div><div><p class="testi-name">Sofía T.</p><p class="testi-meta">Fisioterapeuta · Córdoba</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"En dos semanas de anuncios recuperé la inversión. Llevan mi marketing como si fuera suyo."</p>
-            <span class="testi-badge">ROI positivo sem. 2</span>
-          </article>
-          <article class="testi-card" aria-hidden="true">
-            <div class="testi-header">
-              <div class="testi-info"><div class="testi-avatar">DF</div><div><p class="testi-name">Diego F.</p><p class="testi-meta">Gestoría · Almería</p></div></div>
-              <div class="testi-stars">★★★★★</div>
-            </div>
-            <p class="testi-quote">"Hablas siempre con la misma persona. Trato directo, resultados directos."</p>
-            <span class="testi-badge">+40% contactos</span>
-          </article>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== TEAM — sección 05 ===== -->
-  <section id="team" class="section" aria-labelledby="team-title">
-    <span class="section-num" aria-hidden="true">05</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">El equipo</span>
-      </div>
-      <h2 id="team-title" class="section-title reveal">Dos personas.<br><em>Un solo objetivo:</em><br>que tu negocio crezca.</h2>
-
-      <div class="team-grid" style="margin-top:2.5rem">
-        <div class="team-card-full reveal-scale">
-          <div class="team-avatar" aria-hidden="true">CS</div>
-          <p class="team-name">Carlos</p>
-          <p class="team-role">Co-fundador</p>
-          <p class="team-focus">Meta Ads, estrategia de contenido y gestión de redes. Prácticas en agencia digital + proyectos propios desde los 18.</p>
-          <p class="team-badge" style="margin-top:.75rem">España</p>
-        </div>
-        <div class="team-card-full reveal-scale stagger-1">
-          <div class="team-avatar" aria-hidden="true">JS</div>
-          <p class="team-name">Jostin</p>
-          <p class="team-role">Co-fundador</p>
-          <p class="team-focus">Operaciones, captación de clientes y coordinación de proyectos. Orientado a resultados y crecimiento de negocio.</p>
-          <p class="team-badge" style="margin-top:.75rem">España</p>
-        </div>
-      </div>
-
-      <p class="team-close reveal">Somos pequeños a propósito. Así tienes atención real, no un ticket de soporte.</p>
-    </div>
-  </section>
-
-  <!-- ===== FAQ — sección 06 ===== -->
-  <section id="faq" class="section section-bg-2" aria-labelledby="faq-title">
-    <span class="section-num" aria-hidden="true">06</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">Preguntas frecuentes</span>
-      </div>
-      <h2 id="faq-title" class="section-title reveal">Todo lo que quieres saber<br><em>antes de llamar.</em></h2>
-
-      <div class="faq-list" id="faq-list">
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            <span class="faq-dot" aria-hidden="true"></span>
-            ¿Trabajáis con negocios de cualquier sector?
-            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4,7 10,13 16,7"/></svg>
-          </button>
-          <div class="faq-a" role="region">
-            <div class="faq-a-inner">Sí. Clínicas, tiendas online, restaurantes, talleres, academias... Si tienes clientes, podemos ayudarte a conseguir más.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            <span class="faq-dot" aria-hidden="true"></span>
-            ¿Cuánto tiempo hasta ver resultados?
-            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4,7 10,13 16,7"/></svg>
-          </button>
-          <div class="faq-a" role="region">
-            <div class="faq-a-inner">En publicidad de pago, desde la primera semana. En SEO, entre 2 y 4 meses para posicionamiento sólido.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            <span class="faq-dot" aria-hidden="true"></span>
-            ¿Cómo funciona la consulta gratuita?
-            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4,7 10,13 16,7"/></svg>
-          </button>
-          <div class="faq-a" role="region">
-            <div class="faq-a-inner">Llamada de 20-30 min. Te decimos honestamente si podemos ayudarte y cómo. Sin compromiso ni coste.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            <span class="faq-dot" aria-hidden="true"></span>
-            ¿Hay contrato de permanencia?
-            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4,7 10,13 16,7"/></svg>
-          </button>
-          <div class="faq-a" role="region">
-            <div class="faq-a-inner">No. Trabajamos mes a mes. Te quedas porque los resultados lo justifican.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            <span class="faq-dot" aria-hidden="true"></span>
-            ¿Puedo contratar solo un servicio?
-            <svg class="faq-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4,7 10,13 16,7"/></svg>
-          </button>
-          <div class="faq-a" role="region">
-            <div class="faq-a-inner">Por supuesto. Muchos clientes empiezan con uno y amplían cuando ven resultados.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT — sección 07 ===== -->
-  <section id="contact" class="section" aria-labelledby="contact-title">
-    <span class="section-num" aria-hidden="true">07</span>
-    <div class="container">
-      <div class="eyebrow">
-        <div class="eyebrow-line" aria-hidden="true"></div>
-        <span class="eyebrow-text">Hablemos</span>
-      </div>
-      <h2 id="contact-title" class="section-title reveal">Primera consulta gratis.<br><em>Sin compromiso.</em></h2>
-
-      <div class="contact-grid">
-        <!-- Left: info -->
-        <div>
-          <div class="contact-cards">
-            <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="contact-card reveal" target="_blank" rel="noopener" data-cursor="escribir">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">WhatsApp</p>
-                <p class="contact-card-val">+34 632 23 54 91</p>
-              </div>
-            </a>
-
-            <a href="mailto:hola@solumstudio.es" class="contact-card reveal stagger-1">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">Email</p>
-                <p class="contact-card-val">hola@solumstudio.es</p>
-              </div>
-            </a>
-
-            <div class="contact-card reveal stagger-2">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">Ubicación</p>
-                <p class="contact-card-val">España · 100% remoto</p>
-              </div>
-            </div>
-
-            <div class="contact-card reveal stagger-3">
-              <div class="contact-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,15"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">Respuesta</p>
-                <p class="contact-card-val">Menos de 24 horas</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-cta-card reveal stagger-4">
-            <p class="contact-cta-text">¿Prefieres que te contactemos nosotros? Escríbenos por WhatsApp y te respondemos en menos de 24h.</p>
-            <a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio.+Mi+negocio+es..." class="btn-whatsapp" target="_blank" rel="noopener" data-cursor="escribir">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Escribir por WhatsApp →
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: form -->
-        <div class="contact-form reveal-scale">
-          <form id="contact-form" novalidate aria-label="Formulario de contacto">
-            <div class="form-field">
-              <label class="form-label" for="f-name"><span class="field-num">01</span> Nombre</label>
-              <input type="text" id="f-name" name="name" class="form-input" placeholder="Tu nombre" autocomplete="name" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-contact"><span class="field-num">02</span> Teléfono o email</label>
-              <input type="text" id="f-contact" name="contact" class="form-input" placeholder="Cómo contactarte" autocomplete="tel" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-service"><span class="field-num">03</span> ¿Qué necesitas?</label>
-              <select id="f-service" name="service" class="form-select">
-                <option value="">Selecciona un servicio</option>
-                <option value="Meta Ads / Google Ads">Meta Ads / Google Ads</option>
-                <option value="Redes Sociales">Redes Sociales</option>
-                <option value="SEO">SEO</option>
-                <option value="Diseño Web">Diseño Web</option>
-                <option value="Email Marketing">Email Marketing</option>
-                <option value="Consulta general">Consulta general</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="f-msg"><span class="field-num">04</span> Cuéntanos tu negocio <span style="color:var(--text-3)">(opcional)</span></label>
-              <textarea id="f-msg" name="message" class="form-textarea" placeholder="Descripción breve de tu negocio y lo que buscas..."></textarea>
-            </div>
-            <button type="submit" class="form-submit" data-cursor="enviar">
-              Enviar por WhatsApp →
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer id="footer" role="contentinfo">
-  <div class="footer-marquee-bg" aria-hidden="true">
-    <div class="footer-marquee-inner">
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-      <span>Solum Studio ·</span>
-    </div>
-  </div>
-
+<!-- ===================== STATS BAR ===================== -->
+<section class="stats-bar">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <svg viewBox="0 0 260 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Solum Studio" role="img">
-            <rect x="4" y="4" width="30" height="30" rx="3" transform="rotate(45 19 19)" stroke="#22B882" stroke-width="2"/>
-            <text x="48" y="30" font-family="Sora,sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">Solum</text>
-            <text x="134" y="30" font-family="Sora,sans-serif" font-weight="400" font-size="24" fill="#22B882" letter-spacing="-0.3">Studio</text>
-          </svg>
-        </div>
-        <p class="footer-tagline">Resultados reales. Sin excusas.<br>Agencia de marketing digital para negocios locales españoles.</p>
-        <p class="footer-year">EST · 2026 · España</p>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="40" data-prefix="+">+40</span>
+        <span class="stat-label">negocios ayudados</span>
       </div>
-
-      <div>
-        <p class="footer-col-title">Servicios</p>
-        <nav class="footer-links" aria-label="Servicios">
-          <a href="#services">Meta Ads &amp; Google Ads</a>
-          <a href="#services">Gestión de Redes Sociales</a>
-          <a href="#services">SEO y Posicionamiento</a>
-          <a href="#services">Diseño Web</a>
-          <a href="#services">Copywriting &amp; Contenido</a>
-          <a href="#services">Email Marketing</a>
-        </nav>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3" data-suffix="x">3x</span>
+        <span class="stat-label">retorno medio</span>
       </div>
-
-      <div>
-        <p class="footer-col-title">Contacto</p>
-        <div class="footer-contact">
-          <a href="https://wa.me/34632235491" class="footer-contact-item" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            +34 632 23 54 91
-          </a>
-          <a href="mailto:hola@solumstudio.es" class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            hola@solumstudio.es
-          </a>
-          <a href="https://instagram.com/solumstudio" class="footer-contact-item" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
-            @solumstudio
-          </a>
-        </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="48" data-suffix="h">48h</span>
+        <span class="stat-label">primera propuesta</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100" data-suffix="%">100%</span>
+        <span class="stat-label">satisfacción</span>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Servicios</span>
+      <h2 class="section-title">Todo lo que necesitas para crecer</h2>
+      <p class="section-subtitle">Desde visibilidad hasta conversión — cubrimos todo el embudo de marketing.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Meta Ads &amp; Google Ads</h3>
+        <p>Campañas de pago optimizadas para maximizar tu retorno. Segmentación precisa, creatividades que convierten y seguimiento exhaustivo.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <h3>Gestión de Redes Sociales</h3>
+        <p>Contenido estratégico, comunidad activa y presencia consistente en Instagram, Facebook y TikTok. Tu marca, siempre presente.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>SEO y Posicionamiento</h3>
+        <p>Aparece en Google cuando tus clientes te buscan. Estrategia de contenidos, optimización técnica y construcción de autoridad.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Diseño Web</h3>
+        <p>Webs rápidas, modernas y orientadas a conversión. Diseño profesional que transmite confianza y convierte visitantes en clientes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Copywriting &amp; Contenido</h3>
+        <p>Textos que venden. Desde landing pages hasta posts en redes, redactamos contenido que conecta con tu audiencia y mueve a la acción.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email Marketing</h3>
+        <p>Secuencias automatizadas, newsletters y campañas de email que nutren leads y generan ventas recurrentes con tu base de clientes.</p>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="https://wa.me/34632235491?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios" class="btn btn-primary" target="_blank" rel="noopener">Quiero saber más →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="section section-dark" id="proceso">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Cómo trabajamos</span>
+      <h2 class="section-title">Un proceso claro, sin sorpresas</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-number">01</div>
+        <h3>Análisis</h3>
+        <p>Estudiamos tu negocio, tu competencia y tus objetivos. Sin análisis, no hay estrategia.</p>
+      </div>
+      <div class="process-connector" aria-hidden="true"></div>
+      <div class="process-step">
+        <div class="process-number">02</div>
+        <h3>Estrategia</h3>
+        <p>Diseñamos un plan a medida con acciones concretas y métricas de éxito definidas.</p>
+      </div>
+      <div class="process-connector" aria-hidden="true"></div>
+      <div class="process-step">
+        <div class="process-number">03</div>
+        <h3>Ejecución</h3>
+        <p>Implementamos con rapidez y precisión. Reportes semanales para que siempre sepas qué pasa.</p>
+      </div>
+      <div class="process-connector" aria-hidden="true"></div>
+      <div class="process-step">
+        <div class="process-number">04</div>
+        <h3>Resultados</h3>
+        <p>Medimos, optimizamos y escalamos. Los resultados hablan por sí solos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Testimonios</span>
+      <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"En 3 meses triplicamos las consultas a través de Instagram. El equipo de Solum sabe lo que hace y lo hace rápido."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <strong>María R.</strong>
+            <span>Clínica de Fisioterapia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Las campañas de Meta Ads que gestionan nos generan un retorno de 4x. Y siempre están disponibles para cualquier duda."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JP</div>
+          <div>
+            <strong>Javier P.</strong>
+            <span>E-commerce de moda</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Llevábamos años sin aparecer en Google. A los 4 meses con Solum estamos en primera página para nuestras palabras clave."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AL</div>
+          <div>
+            <strong>Ana L.</strong>
+            <span>Academia de idiomas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"La web nueva que nos hicieron aumentó la tasa de conversión un 60%. Profesionales, rápidos y muy buenos comunicando."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DR</div>
+          <div>
+            <strong>David R.</strong>
+            <span>Agencia inmobiliaria</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Solum nos ayudó a lanzar nuestra marca desde cero. Estrategia, diseño y ejecución — todo en un mismo sitio."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">LG</div>
+          <div>
+            <strong>Laura G.</strong>
+            <span>Startup de bienestar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"El email marketing que implementaron nos genera ventas recurrentes cada semana. Una inversión que se paga sola."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CM</div>
+          <div>
+            <strong>Carlos M.</strong>
+            <span>Tienda de alimentación</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="section section-dark" id="equipo">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">El equipo</span>
+      <h2 class="section-title">Las personas detrás de los resultados</h2>
+      <p class="section-subtitle">Dos fundadores con una misión: que tu negocio crezca de verdad.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">C</div>
+        <h3>Carlos</h3>
+        <span class="team-role">Co-fundador</span>
+        <p>Estrategia de marketing, paid media y desarrollo de negocio. Apasionado por los datos y los resultados medibles.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">J</div>
+        <h3>Jostin</h3>
+        <span class="team-role">Co-fundador</span>
+        <p>Diseño, contenido y gestión de comunidades. Creativo con mentalidad analítica y obsesión por la calidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Hacéis contratos de permanencia?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>No. Trabajamos mes a mes. Creemos que la mejor forma de mantener a un cliente es con resultados, no con contratos. Puedes cancelar cuando quieras con 15 días de preaviso.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Trabajáis con cualquier tipo de negocio?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Sí, trabajamos con negocios de todos los tamaños y sectores. Desde autónomos hasta pymes. Lo importante es que tengas ganas de crecer y estés dispuesto a invertir en marketing de forma seria.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Cuánto tiempo tardáis en lanzar una campaña?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Enviamos la primera propuesta en menos de 48 horas. Una vez aprobada, la primera campaña suele estar activa en 5-7 días laborables. Somos rápidos porque sabemos que el tiempo es dinero.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Cómo reportáis los resultados?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Enviamos reportes semanales con las métricas más importantes de forma clara y sin tecnicismos. Además, tienes acceso directo a nosotros por WhatsApp para cualquier consulta rápida.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿La primera consulta es realmente gratis?
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Completamente gratis y sin compromiso. En la primera llamada analizamos tu situación, te damos recomendaciones concretas y vemos si encajamos. Si al final decides no trabajar con nosotros, te vas con valor igualmente.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section section-dark contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-label">Contacto</span>
+        <h2 class="section-title">¿Listo para crecer?</h2>
+        <p class="section-subtitle">Cuéntanos tu proyecto. Respondemos en menos de 24 horas.</p>
+        <div class="contact-channels">
+          <a href="https://wa.me/34632235491" class="contact-channel" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#22B882" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.521 5.855L0 24l6.335-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.565 9.565 0 01-4.902-1.347l-.352-.208-3.758.891.939-3.658-.228-.373A9.572 9.572 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4S21.6 6.698 21.6 12 17.302 21.6 12 21.6z"/></svg>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>+34 632 23 54 91</span>
+            </div>
+          </a>
+          <a href="mailto:hola@solumstudio.es" class="contact-channel">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <strong>Email</strong>
+              <span>hola@solumstudio.es</span>
+            </div>
+          </a>
+          <a href="https://instagram.com/solumstudio" class="contact-channel" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <div>
+              <strong>Instagram</strong>
+              <span>@solumstudio</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="formName">Nombre</label>
+            <input type="text" id="formName" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Email</label>
+            <input type="email" id="formEmail" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Mensaje</label>
+            <textarea id="formMessage" name="message" rows="4" placeholder="Cuéntanos sobre tu negocio y qué necesitas..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar por WhatsApp →</button>
+          <p class="form-note">Al enviar, abrirás WhatsApp con tu mensaje preparado.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="Solum Studio">
+          <svg width="20" height="20" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M11 1L21 11L11 21L1 11Z" fill="#22B882"/>
+          </svg>
+          <span>Solum Studio</span>
+        </a>
+        <p>Resultados reales. Sin excusas.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="https://wa.me/34632235491" target="_blank" rel="noopener">+34 632 23 54 91</a>
+        <a href="mailto:hola@solumstudio.es">hola@solumstudio.es</a>
+        <a href="https://instagram.com/solumstudio" target="_blank" rel="noopener">@solumstudio</a>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <p class="footer-legal">© 2026 Solum Studio · Marketing Digital · España</p>
-      <button class="footer-top-btn" id="back-to-top" aria-label="Volver arriba">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><polyline points="3,10 8,5 13,10"/></svg>
-        Volver arriba
-      </button>
+      <p>&copy; 2026 Solum Studio. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/34632235491?text=Hola%2C+me+interesa+la+consulta+gratuita+de+Solum+Studio." class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span class="wa-float-label">Consulta gratis</span>
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<a href="https://wa.me/34632235491?text=Hola%2C%20quiero%20una%20consulta%20gratis" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.521 5.855L0 24l6.335-1.502A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.565 9.565 0 01-4.902-1.347l-.352-.208-3.758.891.939-3.658-.228-.373A9.572 9.572 0 012.4 12C2.4 6.698 6.698 2.4 12 2.4S21.6 6.698 21.6 12 17.302 21.6 12 21.6z"/></svg>
 </a>
 
-<!-- Scripts — IIFE, no modules, defer ordered -->
-<script defer src="lib/gsap.min.js?v=20260603"></script>
-<script defer src="lib/ScrollTrigger.min.js?v=20260603"></script>
-<script defer src="lib/manifest.js?v=20260603"></script>
-<script defer src="main.js?v=20260603"></script>
+<!-- Scripts -->
+<script src="lib/manifest.js?v=20260604"></script>
+<script src="main.js?v=20260604"></script>
 
 </body>
 </html>
