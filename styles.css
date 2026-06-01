@@ -841,13 +841,18 @@ ul {
 .testi-info { display: flex; align-items: center; gap: 12px; }
 
 .testi-avatar {
-  width: 40px; height: 40px;
+  width: 44px; height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #22B882, #0d8a5a);
+  background: #132336;
+  border: 2px solid rgba(34,184,130,.25);
+  overflow: hidden;
+  flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Sora', sans-serif;
-  font-size: .75rem; font-weight: 700;
-  color: #fff; flex-shrink: 0;
+}
+.testi-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .testi-name {
