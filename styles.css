@@ -1107,6 +1107,78 @@ ul {
   border-radius: 2px;
 }
 
+/* ── Services Extra ── */
+.services-extra {
+  background: rgba(34,184,130,.06);
+  border-top: 1px solid rgba(34,184,130,.15);
+  border-bottom: 1px solid rgba(34,184,130,.15);
+  padding: 48px 0;
+}
+
+.services-extra-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.services-extra-icon {
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+}
+
+.services-extra-icon svg {
+  width: 52px; height: 52px;
+}
+
+.services-extra-text {
+  flex: 1; min-width: 200px;
+}
+
+.services-extra-text h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: #fff; margin-bottom: .3rem;
+}
+
+.services-extra-text p {
+  font-size: .9rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.5;
+}
+
+.services-extra-tags {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  flex: 2; min-width: 260px;
+}
+
+.extra-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(34,184,130,.3);
+  background: rgba(34,184,130,.07);
+  font-size: .78rem; font-weight: 500;
+  color: rgba(255,255,255,.7);
+  white-space: nowrap;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.extra-tag:hover {
+  background: rgba(34,184,130,.18);
+  border-color: rgba(34,184,130,.6);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .services-extra-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .services-extra .btn { width: 100%; text-align: center; }
+}
+
 /* ── Process Steps ── */
 .process-steps {
   display: grid;
