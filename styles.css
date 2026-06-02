@@ -685,7 +685,12 @@ ul {
 .stat-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
+}
+.stat-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 2px;
 }
 
 .stat-number {
