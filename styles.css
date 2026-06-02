@@ -985,15 +985,15 @@ ul {
 .service-card--featured:hover { border-color: rgba(34,184,130,.8); }
 
 .service-card-badge {
-  position: absolute;
-  top: 16px; right: 16px;
   background: #22B882;
   color: #0B1829;
   font-family: 'Sora', sans-serif;
-  font-size: .6rem; font-weight: 800;
-  letter-spacing: .1em;
+  font-size: .58rem; font-weight: 800;
+  letter-spacing: .08em;
   padding: 4px 10px;
   border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .service-card-glow {
@@ -1125,16 +1125,16 @@ ul {
 /* ── Services Extra ── */
 .services-extra {
   position: relative;
-  background: #0d2035;
-  border-top: 1px solid rgba(34,184,130,.2);
-  border-bottom: 1px solid rgba(34,184,130,.2);
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   padding: 52px 0;
   overflow: hidden;
 }
 
 .services-extra-bg {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(34,184,130,.09), transparent);
+  background: radial-gradient(ellipse 70% 120% at 50% 50%, rgba(34,184,130,.06), transparent);
   pointer-events: none;
 }
 
@@ -1744,10 +1744,28 @@ ul {
 }
 
 /* ── Service card upgrades ── */
-.service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.service-price { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,.6); margin: 8px 0 12px; line-height: 1.3; }
-.service-price strong { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #22B882; line-height: 1.1; }
-.service-price span { font-size: .8rem; color: rgba(255,255,255,.45); font-weight: 400; }
+.service-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; }
+.service-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 14px;
+  font-family: 'Sora', sans-serif;
+}
+.service-price-label {
+  font-size: .82rem; font-weight: 500;
+  color: rgba(255,255,255,.5);
+}
+.service-price strong {
+  font-size: 1.65rem; font-weight: 800;
+  color: #22B882;
+  line-height: 1;
+}
+.service-price span {
+  font-size: .82rem; font-weight: 400;
+  color: rgba(255,255,255,.45);
+}
 .service-includes-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 12px 0 20px; flex: 1; }
 .service-includes-list li { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: rgba(255,255,255,.75); }
 .service-cta { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: .9rem; font-weight: 600; text-decoration: none; transition: background .2s, border-color .2s; margin-top: auto; }
