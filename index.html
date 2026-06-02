@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260601u" />
+  <link rel="stylesheet" href="styles.css?v=20260601v" />
 </head>
 <body>
 
@@ -127,7 +127,7 @@
 
           <!-- Horizontal grid lines and Y-axis labels -->
           <line x1="100" y1="340" x2="750" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="85" y="345" class="hv-axis-label">€5k</text>
+          <text x="80" y="345" class="hv-axis-label">€5k</text>
 
           <line x1="100" y1="300" x2="750" y2="300" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
           <text x="75" y="305" class="hv-axis-label">€10k</text>
@@ -140,12 +140,6 @@
 
           <line x1="100" y1="180" x2="750" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
           <text x="75" y="185" class="hv-axis-label">€25k</text>
-
-          <line x1="100" y1="140" x2="750" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="145" class="hv-axis-label">€30k</text>
-
-          <line x1="100" y1="100" x2="750" y2="100" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="105" class="hv-axis-label">€35k</text>
 
           <!-- Vertical grid lines and X-axis labels -->
           <line x1="180" y1="100" x2="180" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
@@ -170,20 +164,20 @@
           <text x="648" y="405" class="hv-axis-label">M7</text>
 
           <!-- Area ANTES (gray, flat) -->
-          <path class="hv-area hv-area-before" d="M 100 365 L 180 363 L 260 362 L 340 361 L 420 362 L 500 363 L 580 364 L 660 365 L 750 366 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
+          <path class="hv-area hv-area-before" d="M 100 350 L 180 349 L 260 348 L 340 348 L 420 349 L 500 349 L 580 350 L 660 350 L 750 351 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
 
-          <!-- Area DESPUÉS (green, exponential growth) -->
-          <path class="hv-area hv-area-after" d="M 100 365 L 180 325 L 260 265 L 340 200 L 420 135 L 500 75 L 580 35 L 660 15 L 750 10 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
+          <!-- Area DESPUÉS (green, steady growth) -->
+          <path class="hv-area hv-area-after" d="M 100 350 L 180 325 L 260 300 L 340 275 L 420 250 L 500 225 L 580 200 L 660 175 L 750 160 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
 
-          <!-- Line ANTES -->
-          <polyline class="hv-line hv-line-before" points="100,365 180,363 260,362 340,361 420,362 500,363 580,364 660,365 750,366" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- Line ANTES (almost flat) -->
+          <polyline class="hv-line hv-line-before" points="100,350 180,349 260,348 340,348 420,349 500,349 580,350 660,350 750,351" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
 
-          <!-- Line DESPUÉS -->
-          <polyline class="hv-line hv-line-after" points="100,365 180,325 260,265 340,200 420,135 500,75 580,35 660,15 750,10" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+          <!-- Line DESPUÉS (steady linear growth) -->
+          <polyline class="hv-line hv-line-after" points="100,350 180,325 260,300 340,275 420,250 500,225 580,200 660,175 750,160" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
 
-          <!-- Data point labels on DESPUÉS line -->
-          <text x="760" y="15" class="hv-data-label hv-label-max">€35k+</text>
-          <text x="50" y="370" class="hv-data-label hv-label-min">€2.5k</text>
+          <!-- Data point labels -->
+          <text x="745" y="168" class="hv-data-label hv-label-max">€20k</text>
+          <text x="40" y="355" class="hv-data-label hv-label-min">€8k</text>
         </svg>
 
         <!-- Legend -->
