@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260601n" />
+  <link rel="stylesheet" href="styles.css?v=20260601o" />
 </head>
 <body>
 
@@ -97,40 +97,52 @@
 
     <!-- Hero visual panel -->
     <div class="hero-visual" aria-hidden="true">
-      <div class="hv-waves-wrap">
-        <svg class="hv-waves-svg" viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Wave 1 — más lenta -->
-          <path class="hv-wave hv-wave-1" d="M0,200 C40,180 80,160 120,170 C160,180 200,200 240,185 C280,170 300,155 320,160 L320,260 L0,260 Z"/>
-          <!-- Wave 2 -->
-          <path class="hv-wave hv-wave-2" d="M0,180 C50,155 90,140 130,150 C170,160 210,178 250,162 C285,148 305,135 320,140 L320,260 L0,260 Z"/>
-          <!-- Wave 3 — más rápida -->
-          <path class="hv-wave hv-wave-3" d="M0,155 C45,128 85,115 125,125 C165,135 205,155 248,138 C282,124 302,110 320,118 L320,260 L0,260 Z"/>
-          <!-- Glow line top wave -->
-          <path class="hv-wave-line" d="M0,155 C45,128 85,115 125,125 C165,135 205,155 248,138 C282,124 302,110 320,118"/>
-        </svg>
-        <!-- Punto pulsante encima de la ola -->
-        <div class="hv-pulse-dot"></div>
+      <div class="hv-comparison">
+        <div class="hv-comp-col hv-comp-before">
+          <span class="hv-comp-label">Antes</span>
+          <div class="hv-comp-bars">
+            <div class="hv-comp-bar" style="--height: 15%;">
+              <span class="hv-comp-val">15%</span>
+            </div>
+            <div class="hv-comp-bar" style="--height: 20%;">
+              <span class="hv-comp-val">20%</span>
+            </div>
+            <div class="hv-comp-bar" style="--height: 18%;">
+              <span class="hv-comp-val">18%</span>
+            </div>
+          </div>
+          <div class="hv-comp-labels">
+            <span>Clientes</span>
+            <span>Ventas</span>
+            <span>Conversión</span>
+          </div>
+        </div>
+
+        <div class="hv-arrow">→</div>
+
+        <div class="hv-comp-col hv-comp-after">
+          <span class="hv-comp-label">Después</span>
+          <div class="hv-comp-bars">
+            <div class="hv-comp-bar hv-comp-bar--after" style="--height: 85%;">
+              <span class="hv-comp-val">85%</span>
+            </div>
+            <div class="hv-comp-bar hv-comp-bar--after" style="--height: 92%;">
+              <span class="hv-comp-val">92%</span>
+            </div>
+            <div class="hv-comp-bar hv-comp-bar--after" style="--height: 78%;">
+              <span class="hv-comp-val">78%</span>
+            </div>
+          </div>
+          <div class="hv-comp-labels">
+            <span>Clientes</span>
+            <span>Ventas</span>
+            <span>Conversión</span>
+          </div>
+        </div>
       </div>
 
-      <div class="hv-badges">
-        <div class="hv-badge-item hv-badge-item--1">
-          <span class="hv-badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </span>
-          <span class="hv-badge-text">Más clientes</span>
-        </div>
-        <div class="hv-badge-item hv-badge-item--2">
-          <span class="hv-badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </span>
-          <span class="hv-badge-text">Más ventas</span>
-        </div>
-        <div class="hv-badge-item hv-badge-item--3">
-          <span class="hv-badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          </span>
-          <span class="hv-badge-text">Resultados reales</span>
-        </div>
+      <div class="hv-cta-text">
+        Los resultados hablan por sí solos
       </div>
     </div>
   </div>
