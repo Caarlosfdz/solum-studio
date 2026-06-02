@@ -103,13 +103,9 @@
 
         <svg class="hv-growth-chart" viewBox="0 0 780 480" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <linearGradient id="grad-before" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#666666;stop-opacity:0.6" />
-              <stop offset="100%" style="stop-color:#555555;stop-opacity:0.3" />
-            </linearGradient>
-            <linearGradient id="grad-after" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.8" />
-              <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.3" />
+            <linearGradient id="grad-growth" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.9" />
+              <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.4" />
             </linearGradient>
             <filter id="glow">
               <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -120,26 +116,23 @@
             </filter>
           </defs>
 
-          <!-- Y-axis baseline -->
+          <!-- Y-axis baseline (0% sin estrategia) -->
           <line x1="100" y1="40" x2="100" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
           <!-- X-axis baseline -->
           <line x1="100" y1="380" x2="750" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
 
-          <!-- Horizontal grid lines and Y-axis labels -->
-          <line x1="100" y1="340" x2="750" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="70" y="345" class="hv-axis-label">€5k</text>
+          <!-- Horizontal grid lines and Y-axis labels (%) -->
+          <line x1="100" y1="380" x2="750" y2="380" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+          <text x="55" y="388" class="hv-axis-label" style="font-size:12px; font-weight:600">0%</text>
 
-          <line x1="100" y1="300" x2="750" y2="300" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="65" y="305" class="hv-axis-label">€10k</text>
+          <line x1="100" y1="320" x2="750" y2="320" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="45" y="328" class="hv-axis-label">+50%</text>
 
           <line x1="100" y1="260" x2="750" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="65" y="265" class="hv-axis-label">€15k</text>
+          <text x="45" y="268" class="hv-axis-label">+100%</text>
 
-          <line x1="100" y1="220" x2="750" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="65" y="225" class="hv-axis-label">€20k</text>
-
-          <line x1="100" y1="180" x2="750" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="65" y="185" class="hv-axis-label">€25k</text>
+          <line x1="100" y1="200" x2="750" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="45" y="208" class="hv-axis-label">+150%</text>
 
           <!-- Vertical grid lines and X-axis labels -->
           <line x1="140" y1="100" x2="140" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
@@ -163,52 +156,46 @@
           <line x1="620" y1="100" x2="620" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
           <text x="608" y="405" class="hv-axis-label">M7</text>
 
-          <!-- BARRAS DUALES POR MES -->
-          <!-- M1: Antes €8k, Después €8k -->
-          <rect x="118" y="316" width="12" height="64" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="132" y="316" width="12" height="64" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <!-- BARRAS DE CRECIMIENTO (% ACUMULADO) -->
+          <!-- M1: 0% crecimiento -->
+          <rect x="120" y="380" width="40" height="0" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="125" y="395" class="hv-data-label" style="font-size:13px; fill:rgba(255,255,255,0.6)">0%</text>
 
-          <!-- M2: Antes €8.1k, Después €10.5k -->
-          <rect x="198" y="315" width="12" height="65" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="212" y="292" width="12" height="88" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="228" y="284" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€10.5k</text>
+          <!-- M2: 31% crecimiento -->
+          <rect x="200" y="302" width="40" height="78" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="205" y="290" class="hv-data-label" style="font-size:13px; font-weight:600; fill:#22B882; filter:url(#glow)">+31%</text>
 
-          <!-- M3: Antes €8.2k, Después €13k -->
-          <rect x="278" y="314" width="12" height="66" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="292" y="268" width="12" height="112" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="308" y="260" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€13k</text>
+          <!-- M3: 62% crecimiento -->
+          <rect x="280" y="224" width="40" height="156" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="285" y="210" class="hv-data-label" style="font-size:13px; font-weight:600; fill:#22B882; filter:url(#glow)">+62%</text>
 
-          <!-- M4: Antes €8.2k, Después €15k -->
-          <rect x="358" y="314" width="12" height="66" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="372" y="252" width="12" height="128" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="388" y="244" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€15k</text>
+          <!-- M4: 87% crecimiento -->
+          <rect x="360" y="168" width="40" height="212" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="365" y="152" class="hv-data-label" style="font-size:13px; font-weight:600; fill:#22B882; filter:url(#glow)">+87%</text>
 
-          <!-- M5: Antes €8.3k, Después €17k -->
-          <rect x="438" y="313" width="12" height="67" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="452" y="240" width="12" height="140" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="468" y="232" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€17k</text>
+          <!-- M5: 112% crecimiento -->
+          <rect x="440" y="90" width="40" height="290" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="445" y="72" class="hv-data-label" style="font-size:13px; font-weight:600; fill:#22B882; filter:url(#glow)">+112%</text>
 
-          <!-- M6: Antes €8.4k, Después €18.5k -->
-          <rect x="518" y="312" width="12" height="68" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="532" y="228" width="12" height="152" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="548" y="220" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€18.5k</text>
+          <!-- M6: 131% crecimiento -->
+          <rect x="520" y="36" width="40" height="344" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="522" y="18" class="hv-data-label" style="font-size:13px; font-weight:600; fill:#22B882; filter:url(#glow)">+131%</text>
 
-          <!-- M7: Antes €8.4k, Después €20k -->
-          <rect x="598" y="312" width="12" height="68" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
-          <rect x="612" y="220" width="12" height="160" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
-          <text x="628" y="212" class="hv-data-label" style="font-size:11px; fill:rgba(34,184,130,0.9); font-weight:600">€20k</text>
+          <!-- M7: 150% crecimiento (MÁXIMO) -->
+          <rect x="600" y="0" width="40" height="380" fill="url(#grad-growth)" class="hv-bar hv-growth" />
+          <text x="602" y="355" class="hv-data-label" style="font-size:14px; font-weight:700; fill:#22B882; filter:url(#glow)">+150%</text>
 
-          <!-- Línea superpuesta DESPUÉS (con glow) -->
-          <polyline class="hv-line hv-line-after" points="138,316 218,292 298,268 378,252 458,240 538,228 618,220" fill="none" stroke="#22B882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+          <!-- Línea superpuesta de crecimiento (con glow) -->
+          <polyline class="hv-line hv-line-after" points="140,380 220,302 300,224 380,168 460,90 540,36 620,0" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
 
-          <!-- Puntos de datos en la línea -->
-          <circle cx="138" cy="316" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="218" cy="292" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="298" cy="268" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="378" cy="252" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="458" cy="240" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="538" cy="228" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
-          <circle cx="618" cy="220" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <!-- Puntos de datos brillantes en la línea -->
+          <circle cx="140" cy="380" r="4" fill="#22B882" filter="url(#glow)" opacity="0.8" />
+          <circle cx="220" cy="302" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="300" cy="224" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="380" cy="168" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="460" cy="90" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="540" cy="36" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="620" cy="0" r="4" fill="#22B882" filter="url(#glow)" opacity="0.9" />
         </svg>
 
         <!-- Legend -->
