@@ -104,15 +104,15 @@
         <svg class="hv-growth-chart" viewBox="0 0 780 480" preserveAspectRatio="xMidYMid meet">
           <defs>
             <linearGradient id="grad-before" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#555555;stop-opacity:0.12" />
-              <stop offset="100%" style="stop-color:#555555;stop-opacity:0" />
+              <stop offset="0%" style="stop-color:#666666;stop-opacity:0.6" />
+              <stop offset="100%" style="stop-color:#555555;stop-opacity:0.3" />
             </linearGradient>
             <linearGradient id="grad-after" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.45" />
-              <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.08" />
+              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.8" />
+              <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.3" />
             </linearGradient>
             <filter id="glow">
-              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
               <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
@@ -127,57 +127,88 @@
 
           <!-- Horizontal grid lines and Y-axis labels -->
           <line x1="100" y1="340" x2="750" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="80" y="345" class="hv-axis-label">€5k</text>
+          <text x="70" y="345" class="hv-axis-label">€5k</text>
 
           <line x1="100" y1="300" x2="750" y2="300" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="305" class="hv-axis-label">€10k</text>
+          <text x="65" y="305" class="hv-axis-label">€10k</text>
 
           <line x1="100" y1="260" x2="750" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="265" class="hv-axis-label">€15k</text>
+          <text x="65" y="265" class="hv-axis-label">€15k</text>
 
           <line x1="100" y1="220" x2="750" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="225" class="hv-axis-label">€20k</text>
+          <text x="65" y="225" class="hv-axis-label">€20k</text>
 
           <line x1="100" y1="180" x2="750" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <text x="75" y="185" class="hv-axis-label">€25k</text>
+          <text x="65" y="185" class="hv-axis-label">€25k</text>
 
           <!-- Vertical grid lines and X-axis labels -->
-          <line x1="180" y1="100" x2="180" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="168" y="405" class="hv-axis-label">M1</text>
+          <line x1="140" y1="100" x2="140" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="128" y="405" class="hv-axis-label">M1</text>
 
-          <line x1="260" y1="100" x2="260" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="248" y="405" class="hv-axis-label">M2</text>
+          <line x1="220" y1="100" x2="220" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="208" y="405" class="hv-axis-label">M2</text>
 
-          <line x1="340" y1="100" x2="340" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="328" y="405" class="hv-axis-label">M3</text>
+          <line x1="300" y1="100" x2="300" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="288" y="405" class="hv-axis-label">M3</text>
 
-          <line x1="420" y1="100" x2="420" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="408" y="405" class="hv-axis-label">M4</text>
+          <line x1="380" y1="100" x2="380" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="368" y="405" class="hv-axis-label">M4</text>
 
-          <line x1="500" y1="100" x2="500" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="488" y="405" class="hv-axis-label">M5</text>
+          <line x1="460" y1="100" x2="460" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="448" y="405" class="hv-axis-label">M5</text>
 
-          <line x1="580" y1="100" x2="580" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="568" y="405" class="hv-axis-label">M6</text>
+          <line x1="540" y1="100" x2="540" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="528" y="405" class="hv-axis-label">M6</text>
 
-          <line x1="660" y1="100" x2="660" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <text x="648" y="405" class="hv-axis-label">M7</text>
+          <line x1="620" y1="100" x2="620" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="608" y="405" class="hv-axis-label">M7</text>
 
-          <!-- Area ANTES (gray, suave con crecimiento mínimo) -->
-          <path class="hv-area hv-area-before" d="M 100 316 L 180 315 L 260 314 L 340 313 L 420 313 L 500 312 L 580 311 L 660 310 L 750 309 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
+          <!-- BARRAS DUALES POR MES -->
+          <!-- M1: Antes €8k, Después €8k -->
+          <rect x="118" y="316" width="12" height="64" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="132" y="316" width="12" height="64" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
 
-          <!-- Area DESPUÉS (green, crecimiento lineal suave) -->
-          <path class="hv-area hv-area-after" d="M 100 316 L 180 300 L 260 284 L 340 268 L 420 252 L 500 236 L 580 220 L 660 204 L 750 188 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
+          <!-- M2: Antes €8.1k, Después €10.5k -->
+          <rect x="198" y="315" width="12" height="65" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="212" y="292" width="12" height="88" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="228" y="284" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€10.5k</text>
 
-          <!-- Line ANTES (suave, manteniéndose en €8k) -->
-          <polyline class="hv-line hv-line-before" points="100,316 180,315 260,314 340,313 420,313 500,312 580,311 660,310 750,309" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- M3: Antes €8.2k, Después €13k -->
+          <rect x="278" y="314" width="12" height="66" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="292" y="268" width="12" height="112" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="308" y="260" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€13k</text>
 
-          <!-- Line DESPUÉS (crecimiento lineal suave) -->
-          <polyline class="hv-line hv-line-after" points="100,316 180,300 260,284 340,268 420,252 500,236 580,220 660,204 750,188" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+          <!-- M4: Antes €8.2k, Después €15k -->
+          <rect x="358" y="314" width="12" height="66" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="372" y="252" width="12" height="128" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="388" y="244" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€15k</text>
 
-          <!-- Data point labels -->
-          <text x="745" y="168" class="hv-data-label hv-label-max">€20k</text>
-          <text x="40" y="355" class="hv-data-label hv-label-min">€8k</text>
+          <!-- M5: Antes €8.3k, Después €17k -->
+          <rect x="438" y="313" width="12" height="67" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="452" y="240" width="12" height="140" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="468" y="232" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€17k</text>
+
+          <!-- M6: Antes €8.4k, Después €18.5k -->
+          <rect x="518" y="312" width="12" height="68" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="532" y="228" width="12" height="152" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="548" y="220" class="hv-data-label" style="font-size:11px; fill:rgba(255,255,255,0.7)">€18.5k</text>
+
+          <!-- M7: Antes €8.4k, Después €20k -->
+          <rect x="598" y="312" width="12" height="68" fill="url(#grad-before)" class="hv-bar hv-bar-before" />
+          <rect x="612" y="220" width="12" height="160" fill="url(#grad-after)" class="hv-bar hv-bar-after" />
+          <text x="628" y="212" class="hv-data-label" style="font-size:11px; fill:rgba(34,184,130,0.9); font-weight:600">€20k</text>
+
+          <!-- Línea superpuesta DESPUÉS (con glow) -->
+          <polyline class="hv-line hv-line-after" points="138,316 218,292 298,268 378,252 458,240 538,228 618,220" fill="none" stroke="#22B882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+
+          <!-- Puntos de datos en la línea -->
+          <circle cx="138" cy="316" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="218" cy="292" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="298" cy="268" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="378" cy="252" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="458" cy="240" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="538" cy="228" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
+          <circle cx="618" cy="220" r="3.5" fill="#22B882" filter="url(#glow)" opacity="0.9" />
         </svg>
 
         <!-- Legend -->
