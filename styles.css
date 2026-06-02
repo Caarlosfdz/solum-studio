@@ -696,8 +696,27 @@ ul {
 /* Progress bar */
 .services-progress {
   display: flex; align-items: center; gap: 16px;
-  padding-top: 16px; padding-bottom: 48px;
+  padding-top: 24px; padding-bottom: 48px;
 }
+
+.carousel-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(34,184,130,.35);
+  background: rgba(34,184,130,.07);
+  color: #22B882;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background .2s, border-color .2s, transform .15s;
+}
+.carousel-btn:hover {
+  background: rgba(34,184,130,.18);
+  border-color: #22B882;
+  transform: scale(1.08);
+}
+.carousel-btn:disabled { opacity: .3; cursor: default; transform: none; }
 
 .progress-label {
   font-family: 'Sora', sans-serif;
@@ -716,7 +735,7 @@ ul {
   height: 100%;
   background: #22B882;
   width: 0;
-  transition: width .15s ease;
+  transition: width .3s ease;
   border-radius: 2px;
 }
 

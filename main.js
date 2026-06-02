@@ -188,14 +188,32 @@
 
     var fill = document.getElementById('progress-fill');
     var label = document.getElementById('progress-label');
-    trackOuter.addEventListener('scroll', function () {
+    var btnPrev = document.getElementById('carousel-prev');
+    var btnNext = document.getElementById('carousel-next');
+
+    function updateCarouselUI() {
       var max = trackOuter.scrollWidth - trackOuter.clientWidth;
       var pct = max > 0 ? (trackOuter.scrollLeft / max * 100) : 0;
       if (fill) fill.style.width = pct + '%';
       var cards = trackOuter.querySelectorAll('.service-card-carousel');
       var idx = Math.round(pct / 100 * (cards.length - 1)) + 1;
       if (label) label.textContent = '0' + Math.min(idx, cards.length) + ' / 0' + cards.length;
-    }, { passive: true });
+      if (btnPrev) btnPrev.disabled = trackOuter.scrollLeft <= 0;
+      if (btnNext) btnNext.disabled = trackOuter.scrollLeft >= max - 2;
+    }
+
+    trackOuter.addEventListener('scroll', updateCarouselUI, { passive: true });
+    updateCarouselUI();
+
+    function scrollByCard(dir) {
+      var cards = trackOuter.querySelectorAll('.service-card-carousel');
+      if (!cards.length) return;
+      var cardW = cards[0].offsetWidth + 24;
+      trackOuter.scrollBy({ left: dir * cardW, behavior: 'smooth' });
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', function () { scrollByCard(-1); });
+    if (btnNext) btnNext.addEventListener('click', function () { scrollByCard(1); });
   }
 
   /* ── Back to top ── */
