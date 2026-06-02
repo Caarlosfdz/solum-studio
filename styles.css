@@ -663,46 +663,32 @@ ul {
 }
 .hero-trust span::before { content: none; }
 
-/* ── Stats Bar ── */
-.stats-bar {
-  background: transparent;
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  padding: 40px 0;
+/* ── Hero Stats (inline en hero) ── */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 36px;
+  flex-wrap: wrap;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  text-align: left;
-}
-
-.stat-item {
+.hero-stat {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 0 24px;
-  border-right: 1px solid rgba(255,255,255,.08);
+  gap: 4px;
 }
-.stat-item:first-child { padding-left: 0; }
-.stat-item:last-child { border-right: none; }
 
-.stat-number {
+.hero-stat-number {
   font-family: 'Sora', sans-serif;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #22B882;
   line-height: 1;
 }
 
-.stat-label {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,.5);
-  line-height: 1.45;
-  text-transform: none;
-  letter-spacing: 0;
-  max-width: 160px;
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.4;
 }
 
 /* ── Sections ── */
