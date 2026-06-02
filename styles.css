@@ -1254,16 +1254,23 @@ ul {
 .packs-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  grid-template-rows: auto auto auto auto 1fr auto auto auto;
+  gap: 0 14px;
   align-items: stretch;
   margin-top: 48px;
   width: 100%;
 }
 @media (max-width: 900px) {
-  .packs-grid { grid-template-columns: repeat(2, 1fr); }
+  .packs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto 1fr auto auto auto auto auto auto auto auto auto auto auto;
+  }
 }
 @media (max-width: 500px) {
-  .packs-grid { grid-template-columns: 1fr; }
+  .packs-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
 }
 
 .pack-card {
@@ -1271,11 +1278,14 @@ ul {
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 16px;
   padding: 22px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 8;
+  gap: 0;
+  row-gap: 10px;
   position: relative;
   transition: border-color .25s, transform .25s;
+  padding-top: 40px;
 }
 .pack-card:hover { border-color: rgba(34,184,130,.35); transform: translateY(-3px); }
 
@@ -1286,10 +1296,11 @@ ul {
 .pack-card--featured:hover { border-color: rgba(34,184,130,.7); }
 
 .pack-featured-badge {
+  position: absolute;
+  top: 14px; right: 14px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  align-self: flex-start;
   background: #22B882;
   color: #0B1829;
   font-family: 'Sora', sans-serif;
@@ -1297,7 +1308,7 @@ ul {
   letter-spacing: .1em;
   padding: 4px 12px;
   border-radius: 999px;
-  margin-bottom: -2px;
+  z-index: 1;
 }
 
 .pack-icon {
@@ -1333,7 +1344,7 @@ ul {
   list-style: none;
   display: flex; flex-direction: column;
   gap: 8px;
-  flex: 1;
+  align-self: start;
 }
 .pack-features li {
   display: flex; align-items: flex-start;
@@ -1347,7 +1358,7 @@ ul {
 .pack-price {
   border-top: 1px solid rgba(255,255,255,.07);
   padding-top: 14px;
-  margin-top: auto;
+  align-self: end;
 }
 .pack-price strong {
   display: block;
@@ -1377,6 +1388,15 @@ ul {
   border-radius: 6px;
   padding: 6px 10px;
   line-height: 1.4;
+  align-self: start;
+}
+.pack-savings--none {
+  visibility: hidden;
+  padding: 0;
+  border: none;
+  background: none;
+  height: 0;
+  min-height: 0;
 }
 
 .pack-cta {
