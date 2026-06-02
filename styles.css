@@ -661,11 +661,7 @@ ul {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
 }
-.hero-trust span::before {
-  content: '✓ ';
-  color: #22B882;
-  font-weight: 700;
-}
+.hero-trust span::before { content: none; }
 
 /* ── Stats Bar ── */
 .stats-bar {
