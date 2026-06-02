@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260602b" />
+  <link rel="stylesheet" href="styles.css?v=20260602c" />
 </head>
 <body>
 
@@ -260,9 +260,9 @@
     </div>
   </div>
 
-  <div class="services-scroll-wrap">
-    <div class="services-track-outer" id="services-track-outer" role="region" aria-label="Carrusel de servicios">
-      <div class="services-track" id="services-track">
+  <div class="services-grid-wrap">
+    <div class="container">
+      <div class="services-grid">
 
         <!-- 01 Meta Ads -->
         <article class="service-card-carousel">
@@ -317,9 +317,9 @@
               <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round"><circle cx="22" cy="22" r="12"/><circle cx="22" cy="22" r="5"/><line x1="30" y1="30" x2="40" y2="40"/></svg>
             </div>
           </div>
-          <h3 class="service-name">Aparecer en Google</h3>
+          <h3 class="service-name">SEO &mdash; Aparecer en Google</h3>
           <div class="service-price">Desde <strong>420&euro;</strong><span>/mes</span></div>
-          <p class="service-desc-carousel">Cuando alguien en tu ciudad busca lo que t&uacute; ofreces, queremos que te encuentre a ti primero. Sin pagar por cada visita.</p>
+          <p class="service-desc-carousel">Cuando alguien en tu ciudad busca lo que t&uacute; ofreces, queremos que te encuentre a ti primero &mdash; sin pagar por cada clic.</p>
           <ul class="service-includes-list">
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Revisi&oacute;n completa de tu web</li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22B882" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Mejora de textos para posicionarte</li>
@@ -361,7 +361,7 @@
               <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round"><path d="M36 8L40 12L18 34L10 36L12 28L34 6z"/><line x1="30" y1="14" x2="34" y2="18"/></svg>
             </div>
           </div>
-          <h3 class="service-name">Textos que Venden</h3>
+          <h3 class="service-name">Copywriting Persuasivo</h3>
           <div class="service-price">Desde <strong>320&euro;</strong><span> por proyecto</span></div>
           <p class="service-desc-carousel">Las palabras correctas hacen que la gente act&uacute;e. Escribimos los textos de tu web, tus anuncios y tus emails para que el cliente diga que s&iacute;.</p>
           <ul class="service-includes-list">
@@ -509,35 +509,36 @@
 
       </div>
     </div>
-    <div class="services-progress container">
-      <button class="carousel-btn" id="carousel-prev" aria-label="Anterior">&#8592;</button>
-      <span class="progress-label" id="progress-label">01 / 11</span>
-      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-      <button class="carousel-btn" id="carousel-next" aria-label="Siguiente">&#8594;</button>
-    </div>
   </div>
 </section>
 
 <!-- ===================== SERVICES EXTRA ===================== -->
 <section class="services-extra">
+  <div class="services-extra-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="services-extra-inner">
-      <div class="services-extra-icon" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg>
+      <div class="services-extra-left">
+        <div class="services-extra-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#22B882" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><line x1="24" y1="14" x2="24" y2="34"/><line x1="14" y1="24" x2="34" y2="24"/></svg>
+        </div>
+        <div class="services-extra-text">
+          <h3>&iquest;Necesitas algo que<br>no ves aqu&iacute;?</h3>
+          <p>Tenemos m&aacute;s servicios disponibles.<br>Cu&eacute;ntanos lo que necesitas y te damos soluci&oacute;n.</p>
+        </div>
       </div>
-      <div class="services-extra-text">
-        <h3>&iquest;Necesitas algo que no ves aqu&iacute;?</h3>
-        <p>Trabajamos m&aacute;s servicios seg&uacute;n lo que necesita tu negocio. Cu&eacute;ntanos y encontramos la forma.</p>
+      <div class="services-extra-center">
+        <div class="services-extra-tags" aria-label="Otros servicios disponibles">
+          <span class="extra-tag">&#127775; Branding e identidad visual</span>
+          <span class="extra-tag">&#127909; V&iacute;deo marketing</span>
+          <span class="extra-tag">&#128202; An&aacute;lisis de datos</span>
+          <span class="extra-tag">&#128241; CRM y gesti&oacute;n de clientes</span>
+          <span class="extra-tag">&#128279; Integraciones y APIs</span>
+          <span class="extra-tag">&#128247; Fotograf&iacute;a de producto</span>
+        </div>
       </div>
-      <div class="services-extra-tags" aria-label="Otros servicios disponibles">
-        <span class="extra-tag">Branding e identidad visual</span>
-        <span class="extra-tag">V&iacute;deo marketing</span>
-        <span class="extra-tag">An&aacute;lisis de datos</span>
-        <span class="extra-tag">Tiendas online</span>
-        <span class="extra-tag">CRM y automatizaciones</span>
-        <span class="extra-tag">Fotograf&iacute;a de producto</span>
+      <div class="services-extra-right">
+        <a href="https://wa.me/34632235491?text=Hola%2C%20tengo%20una%20consulta%20sobre%20servicios" class="btn-extra-cta" target="_blank" rel="noopener">Preg&uacute;ntanos sin compromiso &rarr;</a>
       </div>
-      <a href="https://wa.me/34632235491?text=Hola%2C%20tengo%20una%20consulta%20sobre%20servicios" class="btn btn-primary" target="_blank" rel="noopener">Hablemos sin compromiso &rarr;</a>
     </div>
   </div>
 </section>

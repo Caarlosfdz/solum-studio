@@ -941,39 +941,36 @@ ul {
   padding-bottom: 32px;
 }
 
-.services-scroll-wrap { position: relative; }
+/* ── Services Grid ── */
+.services-grid-wrap { padding: 0 0 64px; }
 
-.services-track-outer {
-  overflow-x: auto;
-  overflow-y: hidden;
-  cursor: grab;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 8px 24px 24px;
-  scrollbar-width: none;
-}
-.services-track-outer::-webkit-scrollbar { display: none; }
-
-.services-track {
-  display: flex;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  width: max-content;
-  padding-bottom: 8px;
+  margin-top: 48px;
+}
+
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
 }
 
 .service-card-carousel {
-  flex-shrink: 0;
-  width: 320px;
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 20px;
-  padding: 32px 28px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
   transition: border-color .25s, transform .25s;
 }
 .service-card-carousel:hover {
@@ -1127,74 +1124,116 @@ ul {
 
 /* ── Services Extra ── */
 .services-extra {
-  background: rgba(34,184,130,.06);
-  border-top: 1px solid rgba(34,184,130,.15);
-  border-bottom: 1px solid rgba(34,184,130,.15);
-  padding: 48px 0;
+  position: relative;
+  background: #0d2035;
+  border-top: 1px solid rgba(34,184,130,.2);
+  border-bottom: 1px solid rgba(34,184,130,.2);
+  padding: 52px 0;
+  overflow: hidden;
+}
+
+.services-extra-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(34,184,130,.09), transparent);
+  pointer-events: none;
 }
 
 .services-extra-inner {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
   flex-wrap: wrap;
+}
+
+.services-extra-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-shrink: 0;
+  min-width: 220px;
 }
 
 .services-extra-icon {
   flex-shrink: 0;
   width: 52px; height: 52px;
+  background: rgba(34,184,130,.1);
+  border: 1px solid rgba(34,184,130,.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
 }
-
-.services-extra-icon svg {
-  width: 52px; height: 52px;
-}
-
-.services-extra-text {
-  flex: 1; min-width: 200px;
-}
+.services-extra-icon svg { width: 26px; height: 26px; }
 
 .services-extra-text h3 {
   font-family: 'Sora', sans-serif;
-  font-size: 1.15rem; font-weight: 700;
-  color: #fff; margin-bottom: .3rem;
+  font-size: 1.2rem; font-weight: 800;
+  color: #fff; margin-bottom: .4rem;
+  line-height: 1.25;
+}
+.services-extra-text p {
+  font-size: .88rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.55;
 }
 
-.services-extra-text p {
-  font-size: .9rem;
-  color: rgba(255,255,255,.5);
-  line-height: 1.5;
+.services-extra-center {
+  flex: 1; min-width: 280px;
 }
 
 .services-extra-tags {
   display: flex; flex-wrap: wrap; gap: 10px;
-  flex: 2; min-width: 260px;
 }
 
 .extra-tag {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(34,184,130,.3);
-  background: rgba(34,184,130,.07);
-  font-size: .78rem; font-weight: 500;
-  color: rgba(255,255,255,.7);
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(34,184,130,.25);
+  background: rgba(34,184,130,.06);
+  font-size: .8rem; font-weight: 500;
+  color: rgba(255,255,255,.75);
   white-space: nowrap;
-  transition: background .2s, color .2s, border-color .2s;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+  cursor: default;
 }
-
 .extra-tag:hover {
-  background: rgba(34,184,130,.18);
-  border-color: rgba(34,184,130,.6);
+  background: rgba(34,184,130,.16);
+  border-color: rgba(34,184,130,.55);
   color: #fff;
+  transform: translateY(-2px);
 }
 
-@media (max-width: 700px) {
-  .services-extra-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .services-extra .btn { width: 100%; text-align: center; }
+.services-extra-right { flex-shrink: 0; }
+
+.btn-extra-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: #22B882;
+  color: #0B1829;
+  font-family: 'Sora', sans-serif;
+  font-size: .95rem; font-weight: 800;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 4px 20px rgba(34,184,130,.3);
+}
+.btn-extra-cta:hover {
+  background: #1da570;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(34,184,130,.45);
+}
+
+@media (max-width: 900px) {
+  .services-extra-inner { gap: 28px; }
+  .services-extra-right { width: 100%; }
+  .btn-extra-cta { width: 100%; justify-content: center; }
+}
+@media (max-width: 600px) {
+  .services-extra-left { min-width: 100%; }
+  .services-extra-center { min-width: 100%; }
 }
 
 /* ── Process Steps ── */
@@ -1706,9 +1745,9 @@ ul {
 
 /* ── Service card upgrades ── */
 .service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.service-price { font-size: 1.4rem; font-weight: 700; color: #fff; margin: 8px 0 12px; }
-.service-price strong { font-size: 1.8rem; color: #22B882; }
-.service-price span { font-size: .85rem; color: rgba(255,255,255,.5); font-weight: 400; margin-left: 2px; }
+.service-price { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,.6); margin: 8px 0 12px; line-height: 1.3; }
+.service-price strong { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: #22B882; line-height: 1.1; }
+.service-price span { font-size: .8rem; color: rgba(255,255,255,.45); font-weight: 400; }
 .service-includes-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 12px 0 20px; flex: 1; }
 .service-includes-list li { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: rgba(255,255,255,.75); }
 .service-cta { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: .9rem; font-weight: 600; text-decoration: none; transition: background .2s, border-color .2s; margin-top: auto; }
