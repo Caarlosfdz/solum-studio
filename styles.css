@@ -626,9 +626,10 @@ ul {
   color: #22B882 !important;
   font-style: normal;
   background: transparent;
-  padding: 0 12px 4px;
-  border-radius: 6px;
-  display: inline-block;
+  padding: 0;
+  border-radius: 0;
+  display: inline;
+  vertical-align: baseline;
 }
 
 .hero-subtitle {
