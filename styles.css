@@ -274,9 +274,9 @@ ul {
 }
 
 .hero-title .accent {
-  color: #000000 !important;
+  color: #22B882 !important;
   font-style: normal;
-  background: #22B882;
+  background: transparent;
   padding: 0 12px 4px;
   border-radius: 6px;
   display: inline-block;
