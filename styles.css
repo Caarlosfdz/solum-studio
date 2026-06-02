@@ -360,16 +360,37 @@ ul {
 .hv-chart-wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.hv-chart-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  animation: title-fade 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes title-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hv-growth-chart {
   width: 100%;
-  max-width: 700px;
+  max-width: 780px;
   height: auto;
-  min-height: 400px;
-  margin-bottom: 12px;
 }
 
 .hv-area {
@@ -397,10 +418,10 @@ ul {
 }
 
 .hv-line {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: line-reveal 2s ease-out forwards;
-  filter: drop-shadow(0 0 8px rgba(34, 184, 130, 0.4));
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: line-reveal 2.2s ease-out forwards;
+  filter: drop-shadow(0 0 10px rgba(34, 184, 130, 0.5));
 }
 
 .hv-line-before {
@@ -417,18 +438,41 @@ ul {
   }
 }
 
-.hv-dot {
-  animation: dot-appear 0.6s ease-out forwards;
+.hv-axis-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  fill: rgba(255, 255, 255, 0.4);
+  text-anchor: end;
+  animation: axis-fade 1s ease-out 0.5s both;
 }
 
-.hv-dot:nth-child(1) { animation-delay: 2s; }
-.hv-dot:nth-child(2) { animation-delay: 2.2s; }
-.hv-dot:nth-child(3) { animation-delay: 2.4s; }
+@keyframes axis-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-@keyframes dot-appear {
+.hv-data-label {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  animation: label-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
+
+.hv-label-max {
+  fill: #22B882;
+  animation-delay: 2.2s;
+}
+
+.hv-label-min {
+  fill: rgba(255, 255, 255, 0.5);
+  animation-delay: 1.8s;
+}
+
+@keyframes label-pop {
   from {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0.8);
   }
   to {
     opacity: 1;
@@ -436,27 +480,39 @@ ul {
   }
 }
 
-.hv-chart-label {
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  fill: rgba(255, 255, 255, 0.6);
-  animation: label-fade 0.8s ease-out forwards;
-  opacity: 0;
+.hv-legend {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  justify-content: center;
+  animation: legend-fade 0.8s ease-out 2.4s both;
 }
 
-.hv-label-antes {
-  animation-delay: 0.8s;
+.hv-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.hv-label-despues {
-  animation-delay: 1.6s;
-  fill: #22B882;
-  font-weight: 800;
-  font-size: 1.1rem;
+.hv-legend-line {
+  width: 20px;
+  height: 2.5px;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
-@keyframes label-fade {
+.hv-legend-before {
+  background: #777777;
+}
+
+.hv-legend-after {
+  background: #22B882;
+  box-shadow: 0 0 8px rgba(34, 184, 130, 0.4);
+}
+
+@keyframes legend-fade {
   from {
     opacity: 0;
     transform: translateY(8px);
@@ -473,7 +529,7 @@ ul {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  animation: cta-reveal 1s ease-out 2.2s both;
+  animation: cta-reveal 1s ease-out 2.6s both;
   letter-spacing: -0.01em;
 }
 

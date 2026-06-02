@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260601t" />
+  <link rel="stylesheet" href="styles.css?v=20260601u" />
 </head>
 <body>
 
@@ -98,21 +98,21 @@
     <!-- Hero visual panel -->
     <div class="hero-visual" aria-hidden="true">
       <div class="hv-chart-wrapper">
-        <svg class="hv-growth-chart" viewBox="0 0 700 400" preserveAspectRatio="xMidYMid meet">
+        <!-- Chart title -->
+        <h3 class="hv-chart-title">Ingresos mensuales</h3>
+
+        <svg class="hv-growth-chart" viewBox="0 0 780 480" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <!-- Gradients for areas -->
             <linearGradient id="grad-before" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#555555;stop-opacity:0.15" />
+              <stop offset="0%" style="stop-color:#555555;stop-opacity:0.12" />
               <stop offset="100%" style="stop-color:#555555;stop-opacity:0" />
             </linearGradient>
             <linearGradient id="grad-after" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.5" />
+              <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.45" />
               <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.08" />
             </linearGradient>
-
-            <!-- Glow effect -->
             <filter id="glow">
-              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
               <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
@@ -120,34 +120,83 @@
             </filter>
           </defs>
 
-          <!-- Background grid -->
-          <rect width="700" height="400" fill="none" />
-          <line x1="80" y1="320" x2="680" y2="320" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
-          <line x1="80" y1="240" x2="680" y2="240" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <line x1="80" y1="160" x2="680" y2="160" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
-          <line x1="80" y1="80" x2="680" y2="80" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <!-- Y-axis baseline -->
+          <line x1="100" y1="40" x2="100" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+          <!-- X-axis baseline -->
+          <line x1="100" y1="380" x2="750" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
 
-          <!-- Area ANTES (gray, flat baseline) -->
-          <path class="hv-area hv-area-before" d="M 80 315 L 200 312 L 320 310 L 440 311 L 560 313 L 680 315 L 680 360 L 80 360 Z" fill="url(#grad-before)" />
+          <!-- Horizontal grid lines and Y-axis labels -->
+          <line x1="100" y1="340" x2="750" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="85" y="345" class="hv-axis-label">€5k</text>
 
-          <!-- Area DESPUÉS (green, explosive growth) -->
-          <path class="hv-area hv-area-after" d="M 80 315 L 200 260 L 320 160 L 440 80 L 560 30 L 680 15 L 680 360 L 80 360 Z" fill="url(#grad-after)" />
+          <line x1="100" y1="300" x2="750" y2="300" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="305" class="hv-axis-label">€10k</text>
 
-          <!-- Line ANTES (muted) -->
-          <polyline class="hv-line hv-line-before" points="80,315 200,312 320,310 440,311 560,313 680,315" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="100" y1="260" x2="750" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="265" class="hv-axis-label">€15k</text>
 
-          <!-- Line DESPUÉS (bright green with glow) -->
-          <polyline class="hv-line hv-line-after" points="80,315 200,260 320,160 440,80 560,30 680,15" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+          <line x1="100" y1="220" x2="750" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="225" class="hv-axis-label">€20k</text>
 
-          <!-- Dots on DESPUÉS line for emphasis -->
-          <circle class="hv-dot" cx="680" cy="15" r="6" fill="#22B882" opacity="0" />
-          <circle class="hv-dot" cx="560" cy="30" r="5" fill="#22B882" opacity="0" />
-          <circle class="hv-dot" cx="440" cy="80" r="5" fill="#22B882" opacity="0" />
+          <line x1="100" y1="180" x2="750" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="185" class="hv-axis-label">€25k</text>
 
-          <!-- Labels -->
-          <text x="100" y="385" class="hv-chart-label hv-label-antes">Antes</text>
-          <text x="630" y="35" class="hv-chart-label hv-label-despues">Después</text>
+          <line x1="100" y1="140" x2="750" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="145" class="hv-axis-label">€30k</text>
+
+          <line x1="100" y1="100" x2="750" y2="100" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+          <text x="75" y="105" class="hv-axis-label">€35k</text>
+
+          <!-- Vertical grid lines and X-axis labels -->
+          <line x1="180" y1="100" x2="180" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="168" y="405" class="hv-axis-label">M1</text>
+
+          <line x1="260" y1="100" x2="260" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="248" y="405" class="hv-axis-label">M2</text>
+
+          <line x1="340" y1="100" x2="340" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="328" y="405" class="hv-axis-label">M3</text>
+
+          <line x1="420" y1="100" x2="420" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="408" y="405" class="hv-axis-label">M4</text>
+
+          <line x1="500" y1="100" x2="500" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="488" y="405" class="hv-axis-label">M5</text>
+
+          <line x1="580" y1="100" x2="580" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="568" y="405" class="hv-axis-label">M6</text>
+
+          <line x1="660" y1="100" x2="660" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <text x="648" y="405" class="hv-axis-label">M7</text>
+
+          <!-- Area ANTES (gray, flat) -->
+          <path class="hv-area hv-area-before" d="M 100 365 L 180 363 L 260 362 L 340 361 L 420 362 L 500 363 L 580 364 L 660 365 L 750 366 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
+
+          <!-- Area DESPUÉS (green, exponential growth) -->
+          <path class="hv-area hv-area-after" d="M 100 365 L 180 325 L 260 265 L 340 200 L 420 135 L 500 75 L 580 35 L 660 15 L 750 10 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
+
+          <!-- Line ANTES -->
+          <polyline class="hv-line hv-line-before" points="100,365 180,363 260,362 340,361 420,362 500,363 580,364 660,365 750,366" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+          <!-- Line DESPUÉS -->
+          <polyline class="hv-line hv-line-after" points="100,365 180,325 260,265 340,200 420,135 500,75 580,35 660,15 750,10" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+
+          <!-- Data point labels on DESPUÉS line -->
+          <text x="760" y="15" class="hv-data-label hv-label-max">€35k+</text>
+          <text x="50" y="370" class="hv-data-label hv-label-min">€2.5k</text>
         </svg>
+
+        <!-- Legend -->
+        <div class="hv-legend">
+          <div class="hv-legend-item">
+            <span class="hv-legend-line hv-legend-before"></span>
+            <span>Antes (sin estrategia)</span>
+          </div>
+          <div class="hv-legend-item">
+            <span class="hv-legend-line hv-legend-after"></span>
+            <span>Después (con Solum)</span>
+          </div>
+        </div>
       </div>
 
       <div class="hv-cta-text">
