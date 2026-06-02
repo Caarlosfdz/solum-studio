@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=20260601r" />
+  <link rel="stylesheet" href="styles.css?v=20260601s" />
 </head>
 <body>
 
@@ -97,110 +97,43 @@
 
     <!-- Hero visual panel -->
     <div class="hero-visual" aria-hidden="true">
-      <div class="hv-metrics">
-        <!-- Métrica 1: Clientes -->
-        <div class="hv-metric-card">
-          <div class="hv-metric-header">
-            <span class="hv-metric-icon">👥</span>
-            <span class="hv-metric-title">Clientes</span>
-          </div>
-          <div class="hv-metric-bars">
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Antes</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-before" style="--width: 18%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-before">+8</span>
-            </div>
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Después</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-after" style="--width: 94%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-after">+52</span>
-            </div>
-          </div>
-          <div class="hv-metric-growth">+550%</div>
-        </div>
+      <svg class="hv-growth-chart" viewBox="0 0 560 300" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="grad-before" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#666666;stop-opacity:0.2" />
+            <stop offset="100%" style="stop-color:#666666;stop-opacity:0" />
+          </linearGradient>
+          <linearGradient id="grad-after" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#22B882;stop-opacity:0.35" />
+            <stop offset="100%" style="stop-color:#22B882;stop-opacity:0.05" />
+          </linearGradient>
+        </defs>
 
-        <!-- Métrica 2: Ingresos -->
-        <div class="hv-metric-card">
-          <div class="hv-metric-header">
-            <span class="hv-metric-icon">💰</span>
-            <span class="hv-metric-title">Ingresos</span>
-          </div>
-          <div class="hv-metric-bars">
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Antes</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-before" style="--width: 15%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-before">€12k</span>
-            </div>
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Después</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-after" style="--width: 92%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-after">€87k</span>
-            </div>
-          </div>
-          <div class="hv-metric-growth">+625%</div>
-        </div>
+        <!-- Grid lines -->
+        <line x1="60" y1="240" x2="540" y2="240" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <line x1="60" y1="180" x2="540" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <line x1="60" y1="120" x2="540" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <line x1="60" y1="60" x2="540" y2="60" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
 
-        <!-- Métrica 3: Conversiones -->
-        <div class="hv-metric-card">
-          <div class="hv-metric-header">
-            <span class="hv-metric-icon">🎯</span>
-            <span class="hv-metric-title">Conversiones</span>
-          </div>
-          <div class="hv-metric-bars">
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Antes</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-before" style="--width: 12%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-before">2.1%</span>
-            </div>
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Después</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-after" style="--width: 87%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-after">12.4%</span>
-            </div>
-          </div>
-          <div class="hv-metric-growth">+490%</div>
-        </div>
+        <!-- Area ANTES (gray, flat) -->
+        <path class="hv-area hv-area-before" d="M 60 235 L 160 232 L 260 230 L 360 231 L 460 233 L 540 235 L 540 270 L 60 270 Z" fill="url(#grad-before)" />
 
-        <!-- Métrica 4: ROI -->
-        <div class="hv-metric-card">
-          <div class="hv-metric-header">
-            <span class="hv-metric-icon">📈</span>
-            <span class="hv-metric-title">ROI</span>
-          </div>
-          <div class="hv-metric-bars">
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Antes</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-before" style="--width: 20%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-before">1.2x</span>
-            </div>
-            <div class="hv-metric-bar-group">
-              <span class="hv-bar-label">Después</span>
-              <div class="hv-bar-container">
-                <div class="hv-bar hv-bar-after" style="--width: 96%;"></div>
-              </div>
-              <span class="hv-bar-value hv-value-after">7.8x</span>
-            </div>
-          </div>
-          <div class="hv-metric-growth">+550%</div>
-        </div>
-      </div>
+        <!-- Area DESPUÉS (green, growth) -->
+        <path class="hv-area hv-area-after" d="M 60 235 L 160 190 L 260 130 L 360 80 L 460 35 L 540 20 L 540 270 L 60 270 Z" fill="url(#grad-after)" />
+
+        <!-- Line ANTES -->
+        <polyline class="hv-line hv-line-before" points="60,235 160,232 260,230 360,231 460,233 540,235" fill="none" stroke="#888888" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <!-- Line DESPUÉS -->
+        <polyline class="hv-line hv-line-after" points="60,235 160,190 260,130 360,80 460,35 540,20" fill="none" stroke="#22B882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+        <!-- Antes/Después labels on chart -->
+        <text x="100" y="260" class="hv-chart-label hv-label-antes">Antes</text>
+        <text x="500" y="30" class="hv-chart-label hv-label-despues">Después</text>
+      </svg>
 
       <div class="hv-cta-text">
-        Esto es lo que pasa cuando trabajas con gente que sabe
+        Los resultados hablan por sí solos
       </div>
     </div>
   </div>
