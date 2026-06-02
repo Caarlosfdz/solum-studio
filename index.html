@@ -163,17 +163,17 @@
           <line x1="660" y1="100" x2="660" y2="380" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
           <text x="648" y="405" class="hv-axis-label">M7</text>
 
-          <!-- Area ANTES (gray, flat) -->
-          <path class="hv-area hv-area-before" d="M 100 350 L 180 349 L 260 348 L 340 348 L 420 349 L 500 349 L 580 350 L 660 350 L 750 351 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
+          <!-- Area ANTES (gray, escalonado) -->
+          <path class="hv-area hv-area-before" d="M 100 358 L 180 358 L 180 354 L 260 354 L 260 350 L 340 350 L 340 346 L 420 346 L 420 342 L 500 342 L 500 340 L 580 340 L 580 338 L 660 338 L 660 336 L 750 336 L 750 385 L 100 385 Z" fill="url(#grad-before)" />
 
-          <!-- Area DESPUÉS (green, steady growth) -->
-          <path class="hv-area hv-area-after" d="M 100 350 L 180 325 L 260 300 L 340 275 L 420 250 L 500 225 L 580 200 L 660 175 L 750 160 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
+          <!-- Area DESPUÉS (green, escalonado con crecimiento) -->
+          <path class="hv-area hv-area-after" d="M 100 358 L 180 358 L 180 318 L 260 318 L 260 282 L 340 282 L 340 246 L 420 246 L 420 214 L 500 214 L 500 184 L 580 184 L 580 154 L 660 154 L 660 130 L 750 130 L 750 385 L 100 385 Z" fill="url(#grad-after)" />
 
-          <!-- Line ANTES (almost flat) -->
-          <polyline class="hv-line hv-line-before" points="100,350 180,349 260,348 340,348 420,349 500,349 580,350 660,350 750,351" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- Line ANTES (escalonada, casi plana) -->
+          <polyline class="hv-line hv-line-before" points="100,358 180,358 180,354 260,354 260,350 340,350 340,346 420,346 420,342 500,342 500,340 580,340 580,338 660,338 660,336 750,336" fill="none" stroke="#777777" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" />
 
-          <!-- Line DESPUÉS (steady linear growth) -->
-          <polyline class="hv-line hv-line-after" points="100,350 180,325 260,300 340,275 420,250 500,225 580,200 660,175 750,160" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+          <!-- Line DESPUÉS (escalonada con crecimiento claro) -->
+          <polyline class="hv-line hv-line-after" points="100,358 180,358 180,318 260,318 260,282 340,282 340,246 420,246 420,214 500,214 500,184 580,184 580,154 660,154 660,130 750,130" fill="none" stroke="#22B882" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" filter="url(#glow)" />
 
           <!-- Data point labels -->
           <text x="745" y="168" class="hv-data-label hv-label-max">€20k</text>
