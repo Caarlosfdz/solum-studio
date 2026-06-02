@@ -1255,7 +1255,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto auto auto 1fr auto auto auto;
-  gap: 0 14px;
+  gap: 10px 14px;
   align-items: stretch;
   margin-top: 48px;
   width: 100%;
@@ -1358,7 +1358,7 @@ ul {
 .pack-price {
   border-top: 1px solid rgba(255,255,255,.07);
   padding-top: 14px;
-  align-self: end;
+  align-self: start;
 }
 .pack-price strong {
   display: block;
