@@ -1254,28 +1254,29 @@ ul {
 .packs-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: start;
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 48px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .packs-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 640px) {
-  .packs-grid { grid-template-columns: 1fr; max-width: 480px; margin: 48px auto 0; }
+@media (max-width: 580px) {
+  .packs-grid { grid-template-columns: 1fr; }
 }
 
 .pack-card {
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.1);
-  border-radius: 20px;
-  padding: 32px 28px;
+  border-radius: 16px;
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   position: relative;
   transition: border-color .25s, transform .25s;
 }
-.pack-card:hover { border-color: rgba(34,184,130,.35); transform: translateY(-4px); }
+.pack-card:hover { border-color: rgba(34,184,130,.35); transform: translateY(-3px); }
 
 .pack-card--featured {
   border-color: rgba(34,184,130,.45);
@@ -1291,95 +1292,98 @@ ul {
   background: #22B882;
   color: #0B1829;
   font-family: 'Sora', sans-serif;
-  font-size: .6rem; font-weight: 800;
-  letter-spacing: .12em;
-  padding: 5px 14px;
+  font-size: .58rem; font-weight: 800;
+  letter-spacing: .1em;
+  padding: 4px 12px;
   border-radius: 999px;
-  margin-bottom: -4px;
+  margin-bottom: -2px;
 }
 
 .pack-icon {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1;
 }
 
 .pack-name {
   font-family: 'Sora', sans-serif;
-  font-size: 1.15rem; font-weight: 800;
+  font-size: 1rem; font-weight: 800;
   color: #fff;
 }
 
 .pack-desc {
-  font-size: .88rem;
-  color: rgba(255,255,255,.55);
-  line-height: 1.6;
+  font-size: .82rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.55;
 }
 
 .pack-tags {
-  display: flex; flex-wrap: wrap; gap: 8px;
+  display: flex; flex-wrap: wrap; gap: 6px;
 }
 .pack-tags span {
-  font-size: .7rem; font-weight: 600;
-  padding: 3px 10px;
+  font-size: .68rem; font-weight: 600;
+  padding: 3px 9px;
   border-radius: 999px;
-  border: 1px solid rgba(34,184,130,.3);
-  color: rgba(255,255,255,.6);
-  background: rgba(34,184,130,.06);
+  border: 1px solid rgba(34,184,130,.25);
+  color: rgba(255,255,255,.55);
+  background: rgba(34,184,130,.05);
 }
 
 .pack-features {
   list-style: none;
   display: flex; flex-direction: column;
-  gap: 9px;
+  gap: 8px;
   flex: 1;
 }
 .pack-features li {
   display: flex; align-items: flex-start;
-  gap: 8px;
-  font-size: .85rem;
-  color: rgba(255,255,255,.75);
-  line-height: 1.45;
+  gap: 7px;
+  font-size: .82rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.4;
 }
 .pack-features li svg { flex-shrink: 0; margin-top: 2px; }
 
 .pack-price {
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding-top: 14px;
+  margin-top: auto;
 }
 .pack-price strong {
   display: block;
   font-family: 'Sora', sans-serif;
-  font-size: 2.4rem; font-weight: 900;
+  font-size: 1.9rem; font-weight: 900;
   color: #fff;
   line-height: 1;
 }
 .pack-price span {
-  font-size: .78rem;
-  color: rgba(255,255,255,.4);
+  font-size: .75rem;
+  color: rgba(255,255,255,.38);
   margin-top: 4px;
   display: block;
+  line-height: 1.4;
 }
 
 .pack-price--custom strong {
-  font-size: 1.8rem;
-  color: rgba(255,255,255,.85);
+  font-size: 1.9rem;
+  color: #22B882;
 }
 
 .pack-savings {
-  font-size: .8rem; font-weight: 600;
+  font-size: .75rem; font-weight: 600;
   color: #22B882;
-  background: rgba(34,184,130,.1);
-  border: 1px solid rgba(34,184,130,.25);
-  border-radius: 8px;
-  padding: 7px 12px;
+  background: rgba(34,184,130,.08);
+  border: 1px solid rgba(34,184,130,.2);
+  border-radius: 6px;
+  padding: 6px 10px;
+  line-height: 1.4;
 }
 
 .pack-cta {
   display: block;
   text-align: center;
-  padding: 13px 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.2);
+  padding: 12px 18px;
+  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,.18);
   color: #fff;
   font-family: 'Sora', sans-serif;
   font-size: .9rem; font-weight: 700;
