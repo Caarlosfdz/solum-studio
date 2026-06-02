@@ -231,12 +231,12 @@ ul {
   z-index: 1;
   max-width: 1160px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 60px;
 }
 
-.hero-content { max-width: 560px; }
+.hero-content { max-width: 560px; flex: 1; }
 
 /* ── Hero Visual Panel ── */
 /* ── Hero Visual — Waves + Badges ── */
