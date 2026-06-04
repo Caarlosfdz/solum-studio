@@ -2113,13 +2113,13 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.07);
   transition: transform .25s, border-color .25s;
 }
-.elige-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.2); }
-.elige-card--blue  { background: rgba(34,184,130,.07); }
-.elige-card--green { background: rgba(34,184,130,.12); }
-.elige-card--purple{ background: rgba(34,184,130,.07); }
+.elige-card:hover { transform: translateY(-4px); border-color: rgba(34,184,130,.3); }
+.elige-card--blue  { background: rgba(255,255,255,.04); }
+.elige-card--green { background: rgba(255,255,255,.04); }
+.elige-card--purple{ background: rgba(255,255,255,.04); }
 .elige-emoji { font-size: 2.2rem; line-height: 1; }
 .elige-name { font-family: 'Sora', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0; }
 .elige-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.6; margin: 0; flex: 1; }
