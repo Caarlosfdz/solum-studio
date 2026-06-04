@@ -1820,7 +1820,9 @@ ul {
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
 .footer-bottom a { font-size: .78rem; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
 .footer-bottom a:hover { color: #22B882; }
-.footer-legal { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.footer-legal { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; }
+.footer-legal a { font-size: .78rem; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
+.footer-legal a:hover { color: #22B882; }
 
 .footer-top-btn {
   display: flex; align-items: center; gap: 6px;
