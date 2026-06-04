@@ -2133,4 +2133,26 @@ ul {
   transition: opacity .2s;
 }
 .elige-link:hover { opacity: .75; }
+
+/* ---- Sectores ---- */
+.sectores-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sector-tag {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: .84rem;
+  color: rgba(255,255,255,.75);
+  transition: background .2s, border-color .2s, color .2s;
+  cursor: default;
+}
+.sector-tag:hover {
+  background: rgba(34,184,130,.12);
+  border-color: rgba(34,184,130,.4);
+  color: #fff;
+}
 @media (max-width: 768px) { .elige-grid { grid-template-columns: 1fr; } }
