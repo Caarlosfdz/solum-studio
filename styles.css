@@ -123,6 +123,7 @@ ul {
 .nav-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   overflow: visible;
   padding-left: 20px;
@@ -130,7 +131,8 @@ ul {
   max-width: 100%;
   width: 100%;
 }
-.nav-cta-wrap { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.nav-links { position: absolute; left: 50%; transform: translateX(-50%); }
+.nav-cta-wrap { display: flex; align-items: center; gap: 16px; flex-shrink: 0; margin-left: auto; }
 
 .nav-links {
   display: flex;
