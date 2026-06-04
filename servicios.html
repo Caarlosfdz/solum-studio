@@ -568,6 +568,102 @@
   </div>
 </section>
 
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq" style="padding:72px 0;">
+  <div class="container" style="max-width:760px;">
+    <div class="eyebrow">
+      <div class="eyebrow-line" aria-hidden="true"></div>
+      <span class="eyebrow-text">Preguntas frecuentes</span>
+    </div>
+    <h2 class="section-title reveal" style="text-align:left; margin-bottom:12px;">Lo que siempre<br><em style="color:#22B882;font-style:italic;">nos preguntan.</em></h2>
+    <p style="color:rgba(255,255,255,.45); margin-bottom:40px;">Resolvemos tus dudas antes de que las tengas.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Cu&aacute;nto tiempo tardan en verse resultados?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Depende del servicio. Con Meta Ads y Google Ads los primeros resultados se ven en 2&ndash;4 semanas. Con SEO, los movimientos importantes empiezan entre el 2&ordm; y 4&ordm; mes &mdash; es una inversi&oacute;n a medio plazo pero los resultados son sostenidos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Hay permanencia m&iacute;nima en los servicios mensuales?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No. Trabajamos mes a mes sin permanencia. Si en alg&uacute;n momento no est&aacute;s satisfecho, puedes cancelar con 15 d&iacute;as de preaviso. Nos quedamos porque los resultados hablan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Qu&eacute; presupuesto necesito para los anuncios?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Recomendamos un m&iacute;nimo de 200&ndash;300&euro;/mes en inversi&oacute;n publicitaria, aparte de nuestra gesti&oacute;n. Adaptamos siempre la estrategia a tu presupuesto real y te decimos c&oacute;mo sacarle el m&aacute;ximo rendimiento.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;C&oacute;mo me inform&aacute;is de los resultados?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Cada mes recibes un informe claro con las m&eacute;tricas que importan: tr&aacute;fico, posiciones, leads y retorno. Adem&aacute;s tienes acceso directo a Carlos o Jostin por WhatsApp para cualquier duda puntual.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Trabajais solo en una zona o tambi&eacute;n en otras ciudades?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Trabajamos con negocios de toda Espa&ntilde;a e internacionalmente. Todo se gestiona 100% online, sin necesidad de reuniones presenciales. Da igual si est&aacute;s en Madrid, Barcelona, Sevilla o en un pueblo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Puedo contratar un solo servicio o tengo que coger un pack?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Puedes contratar exactamente lo que necesitas. Tenemos servicios sueltos desde 149&euro; y packs combinados con descuento si quieres varias cosas a la vez. Sin obligaci&oacute;n de coger m&aacute;s de lo que necesitas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Necesito tener web para contratar vuestros servicios?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No es imprescindible para todos los servicios. Para redes sociales, anuncios o SEO local puedes empezar sin web. Si la necesitas, nosotros mismos te la hacemos y la dejamos lista antes de arrancar la estrategia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          &iquest;Qui&eacute;n gestiona mi cuenta, hay rotaci&oacute;n de equipo?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Carlos y Jostin gestionamos todo directamente. No hay account managers intermedios ni rotaci&oacute;n de equipo. Siempre hablar&aacute;s con la misma persona que conoce tu negocio.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
@@ -608,5 +704,22 @@
 
 <script src="lib/manifest.js?v=20260604a"></script>
 <script src="main.js?v=20260604a"></script>
+<script>
+(function(){
+  document.querySelectorAll('.faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-question').forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if(!expanded){
+        btn.setAttribute('aria-expanded','true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
