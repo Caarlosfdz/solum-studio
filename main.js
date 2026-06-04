@@ -130,13 +130,13 @@
         var otherAnswer = other.querySelector('.faq-answer');
         if (otherBtn && otherAnswer) {
           otherBtn.setAttribute('aria-expanded', 'false');
-          otherAnswer.hidden = true;
+          otherAnswer.classList.remove('open');
         }
       });
 
       if (!isOpen) {
         btn.setAttribute('aria-expanded', 'true');
-        answer.hidden = false;
+        answer.classList.add('open');
       }
     });
   });

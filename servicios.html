@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="styles.css?v=20260604j" />
+  <link rel="stylesheet" href="styles.css?v=20260604k" />
 </head>
 <body>
 
@@ -698,22 +698,5 @@
 
 <script src="lib/manifest.js?v=20260604a"></script>
 <script src="main.js?v=20260604a"></script>
-<script>
-(function(){
-  document.querySelectorAll('.faq-question').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      document.querySelectorAll('.faq-question').forEach(function(b){
-        b.setAttribute('aria-expanded','false');
-        b.nextElementSibling.classList.remove('open');
-      });
-      if(!expanded){
-        btn.setAttribute('aria-expanded','true');
-        btn.nextElementSibling.classList.add('open');
-      }
-    });
-  });
-})();
-</script>
 </body>
 </html>
