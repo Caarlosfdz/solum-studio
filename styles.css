@@ -2170,8 +2170,8 @@ ul {
 /* ── CTA FINAL servicios.html ─────────────────────────── */
 .servicios-cta-final {
   padding: 90px 0 100px;
-  background: linear-gradient(135deg, #0d2e1a 0%, #0f3d22 40%, #0a2918 100%);
-  border-top: 1px solid rgba(34,184,130,.2);
+  background: linear-gradient(135deg, #0e2240 0%, #113a5c 50%, #0a1e36 100%);
+  border-top: 1px solid rgba(255,255,255,.07);
   text-align: center;
   position: relative;
   overflow: hidden;
