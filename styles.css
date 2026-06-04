@@ -103,7 +103,7 @@ ul {
 
 /* ── Nav Logo ── */
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; margin-right: auto; }
-.nav-logo-img { height: 110px !important; width: auto !important; display: block; }
+.nav-logo-img { height: 118px !important; width: auto !important; display: block; }
 .nav-logo:hover { opacity: .88; transition: opacity .2s; }
 
 /* ── Nav ── */
@@ -123,7 +123,7 @@ ul {
 .nav-inner {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 80px;
   overflow: visible;
   padding-left: 20px;
   padding-right: 32px;
@@ -177,10 +177,12 @@ ul {
 .nav-mobile {
   display: none;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px 24px 24px;
-  background: rgba(11, 24, 41, 0.98);
+  gap: 12px;
+  padding: 16px 20px 20px;
+  background: rgba(11, 24, 41, 0.99);
   border-top: 1px solid rgba(255,255,255,0.08);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
 }
 
 .nav-mobile ul {
@@ -582,7 +584,7 @@ ul {
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { display: none; }
-  .hero { padding: 80px 0 60px; }
+  .hero { padding: 100px 0 60px; }
 }
 
 .hero-badge {
@@ -1916,7 +1918,7 @@ ul {
 }
 
 @media (max-width: 700px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links, .nav-cta, .nav-cta-wrap { display: none; }
   .nav-toggle { display: flex; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .about-diffs { grid-template-columns: 1fr; }
