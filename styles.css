@@ -223,6 +223,9 @@ ul {
   pointer-events: none;
   z-index: 0;
 }
+@media (max-width: 768px) {
+  #particles-canvas { display: none; }
+}
 
 .hero::before {
   content: '';
