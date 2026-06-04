@@ -125,18 +125,22 @@
     btn.addEventListener('click', function () {
       var isOpen = btn.getAttribute('aria-expanded') === 'true';
 
+      // Close all
       faqItems.forEach(function (other) {
         var otherBtn = other.querySelector('.faq-question');
         var otherAnswer = other.querySelector('.faq-answer');
         if (otherBtn && otherAnswer) {
           otherBtn.setAttribute('aria-expanded', 'false');
-          otherAnswer.classList.remove('open');
+          otherAnswer.style.maxHeight = '0';
+          otherAnswer.style.paddingBottom = '0';
         }
       });
 
+      // Open clicked if it was closed
       if (!isOpen) {
         btn.setAttribute('aria-expanded', 'true');
-        answer.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.paddingBottom = '20px';
       }
     });
   });

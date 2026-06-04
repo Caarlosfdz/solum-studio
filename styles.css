@@ -2160,10 +2160,9 @@ ul {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .3s ease, padding .3s;
+  transition: max-height .35s ease, padding-bottom .35s;
   padding: 0 24px;
 }
-.faq-answer.open { max-height: 300px; padding: 0 24px 20px; }
 .faq-answer p { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.7; margin: 0; }
 @media (max-width: 768px) { .elige-grid { grid-template-columns: 1fr; } }
 
