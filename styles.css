@@ -2094,3 +2094,39 @@ ul {
 .problem-desc { font-size: .83rem; color: rgba(255,255,255,.5); line-height: 1.55; }
 @media (max-width: 900px) { .problems-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .problems-grid { grid-template-columns: 1fr; } }
+
+/* ---- Elige lo que necesitas ---- */
+.elige-section { padding: 80px 0; }
+.elige-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.elige-card {
+  border-radius: 20px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid rgba(255,255,255,.1);
+  transition: transform .25s, border-color .25s;
+}
+.elige-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.2); }
+.elige-card--blue  { background: rgba(59,130,246,.08); }
+.elige-card--green { background: rgba(34,184,130,.08); }
+.elige-card--purple{ background: rgba(139,92,246,.08); }
+.elige-emoji { font-size: 2.2rem; line-height: 1; }
+.elige-name { font-family: 'Sora', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0; }
+.elige-desc { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.6; margin: 0; flex: 1; }
+.elige-link {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #22B882;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: opacity .2s;
+}
+.elige-link:hover { opacity: .75; }
+@media (max-width: 768px) { .elige-grid { grid-template-columns: 1fr; } }
