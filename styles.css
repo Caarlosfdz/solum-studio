@@ -103,7 +103,7 @@ ul {
 
 /* ── Nav Logo ── */
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; margin-right: auto; }
-.nav-logo-img { height: 130px !important; width: auto !important; display: block; }
+.nav-logo-img { height: 110px !important; width: auto !important; display: block; }
 .nav-logo:hover { opacity: .88; transition: opacity .2s; }
 
 /* ── Nav ── */
