@@ -1,7 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" fill="none" role="img" aria-label="Solum Studio">
-  <!-- Diamond symbol -->
-  <rect x="8" y="8" width="28" height="28" rx="3" ry="3" transform="rotate(45 22 22)" stroke="#22B882" stroke-width="2" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" role="img" aria-label="Solum Studio">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Diamond shape (rounded square rotated 45°) -->
+  <rect x="8" y="8" width="42" height="42" rx="8" ry="8" transform="rotate(45 29 29)" fill="url(#iconGrad)"/>
+
+  <!-- Inner icon: two chevron/bracket shapes in white -->
+  <polyline points="18,24 24,32 18,40" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <polyline points="28,20 36,32 28,44" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+
   <!-- Wordmark -->
-  <text x="54" y="34" font-family="Sora, sans-serif" font-weight="700" font-size="26" fill="#FFFFFF" letter-spacing="-0.5">Solum</text>
-  <text x="145" y="34" font-family="Sora, sans-serif" font-weight="400" font-size="26" fill="#22B882" letter-spacing="-0.3">Studio</text>
+  <text x="70" y="40" font-family="Sora, sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" letter-spacing="-0.5">Solum</text>
+  <text x="175" y="40" font-family="Sora, sans-serif" font-weight="400" font-size="28" fill="#22B882" letter-spacing="-0.3">Studio</text>
 </svg>
