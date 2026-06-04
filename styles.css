@@ -2040,3 +2040,57 @@ ul {
 .team-member-role { font-size:.82rem; color:#22B882; font-weight:600; }
 .team-member-bio { font-size:.84rem; color:rgba(255,255,255,.5); line-height:1.55; }
 @media(max-width:580px){ .team-grid { grid-template-columns:1fr; } }
+
+/* ── Problems section ── */
+.problems-section { padding: 80px 0; }
+.problems-eyebrow {
+  font-family: 'Sora', sans-serif;
+  font-size: .72rem; font-weight: 800;
+  letter-spacing: .14em;
+  color: #22B882;
+  margin-bottom: 14px;
+}
+.problems-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.problems-sub {
+  font-size: .95rem;
+  color: rgba(255,255,255,.5);
+  max-width: 520px;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.problem-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color .2s, transform .2s;
+}
+.problem-card:hover {
+  border-color: rgba(34,184,130,.3);
+  transform: translateY(-3px);
+}
+.problem-emoji { font-size: 2rem; line-height: 1; }
+.problem-name {
+  font-family: 'Sora', sans-serif;
+  font-size: .95rem; font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.problem-desc { font-size: .83rem; color: rgba(255,255,255,.5); line-height: 1.55; }
+@media (max-width: 900px) { .problems-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .problems-grid { grid-template-columns: 1fr; } }
