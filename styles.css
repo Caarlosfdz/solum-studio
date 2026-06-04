@@ -2170,8 +2170,8 @@ ul {
 /* ── CTA FINAL servicios.html ─────────────────────────── */
 .servicios-cta-final {
   padding: 90px 0 100px;
-  background: #0B1829;
-  border-top: 1px solid rgba(255,255,255,.07);
+  background: linear-gradient(135deg, #0d2e1a 0%, #0f3d22 40%, #0a2918 100%);
+  border-top: 1px solid rgba(34,184,130,.2);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2180,7 +2180,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(34,184,130,.07) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(34,184,130,.15) 0%, transparent 65%);
   pointer-events: none;
 }
 .servicios-cta-eyebrow {
