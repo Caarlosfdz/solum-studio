@@ -1965,3 +1965,78 @@ ul {
 .service-includes-list li { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: rgba(255,255,255,.75); }
 .service-cta { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: .9rem; font-weight: 600; text-decoration: none; transition: background .2s, border-color .2s; align-self: stretch; }
 .service-cta:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
+
+/* ── Nav dropdown ── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { display: flex; align-items: center; gap: 5px; }
+.nav-dropdown-toggle svg { transition: transform .2s; flex-shrink: 0; }
+.nav-dropdown:hover .nav-dropdown-toggle svg { transform: rotate(180deg); }
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: #0d1f35;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 210px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s, transform .18s, visibility .18s;
+  z-index: 300;
+  box-shadow: 0 16px 40px rgba(0,0,0,.4);
+  list-style: none;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: rgba(255,255,255,.75);
+  font-size: .88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.nav-dropdown-menu li a:hover {
+  background: rgba(34,184,130,.1);
+  color: #22B882;
+}
+
+/* ── Team member cards (nosotros.html) ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 700px;
+}
+.team-member-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team-member-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#22B882,#1a8f65);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora',sans-serif;
+  font-weight: 800; font-size: 1rem;
+  color: #0B1829;
+}
+.team-member-name { font-family:'Sora',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; }
+.team-member-role { font-size:.82rem; color:#22B882; font-weight:600; }
+.team-member-bio { font-size:.84rem; color:rgba(255,255,255,.5); line-height:1.55; }
+@media(max-width:580px){ .team-grid { grid-template-columns:1fr; } }
