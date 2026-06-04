@@ -140,7 +140,7 @@
       if (!isOpen) {
         btn.setAttribute('aria-expanded', 'true');
         answer.style.maxHeight = answer.scrollHeight + 'px';
-        answer.style.paddingBottom = '20px';
+        answer.style.paddingBottom = '28px';
       }
     });
   });

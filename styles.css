@@ -2161,9 +2161,9 @@ ul {
   max-height: 0;
   overflow: hidden;
   transition: max-height .35s ease, padding-bottom .35s;
-  padding: 0 24px;
+  padding: 0 28px;
 }
-.faq-answer p { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.7; margin: 0; }
+.faq-answer p { color: rgba(255,255,255,.55); font-size: .92rem; line-height: 1.8; margin: 0; padding-bottom: 4px; }
 @media (max-width: 768px) { .elige-grid { grid-template-columns: 1fr; } }
 
 /* ── CTA FINAL servicios.html ─────────────────────────── */
