@@ -2191,11 +2191,12 @@ ul {
   letter-spacing: .18em;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(90deg, #FF6B35 0%, #FF9500 100%);
+  background: linear-gradient(90deg, #1aff8c 0%, #22B882 100%);
   padding: 7px 18px;
   border-radius: 999px;
   margin-bottom: 22px;
-  box-shadow: 0 4px 20px rgba(255,107,53,.35);
+  text-shadow: 0 0 12px rgba(34,255,140,.6);
+  box-shadow: 0 0 18px rgba(34,255,140,.45), 0 0 40px rgba(34,184,130,.25);
 }
 .servicios-cta-title {
   font-family: 'Sora', sans-serif;
