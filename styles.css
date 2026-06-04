@@ -2184,13 +2184,17 @@ ul {
   pointer-events: none;
 }
 .servicios-cta-eyebrow {
+  display: inline-block;
   font-family: 'Sora', sans-serif;
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #22B882;
-  margin-bottom: 16px;
+  color: #0B1829;
+  background: #22B882;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
 }
 .servicios-cta-title {
   font-family: 'Sora', sans-serif;
