@@ -1718,41 +1718,6 @@ ul {
   margin-right: auto;
 }
 
-/* ── FAQ ── */
-.faq-list { max-width: 720px; }
-
-.faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
-.faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
-
-.faq-question {
-  width: 100%;
-  display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  background: none; border: none;
-  padding: 22px 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem; font-weight: 500;
-  color: #ffffff;
-  cursor: pointer; text-align: left;
-  transition: color 0.2s;
-}
-.faq-question:hover { color: #22B882; }
-
-.faq-icon {
-  flex-shrink: 0;
-  color: rgba(255,255,255,0.4);
-  transition: transform 0.3s ease;
-}
-.faq-question[aria-expanded="true"] .faq-icon {
-  transform: rotate(180deg);
-  color: #22B882;
-}
-
-.faq-answer { padding: 0 0 22px; }
-.faq-answer p {
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.7;
-}
 
 /* ── Contact ── */
 .contact-section { padding: 96px 0; }
@@ -2181,7 +2146,9 @@ ul {
   font-weight: 600;
   color: #fff;
   text-align: left;
+  transition: color .2s;
 }
+.faq-question:hover { color: #22B882; }
 .faq-icon {
   font-size: 1.3rem;
   color: #22B882;
@@ -2203,7 +2170,8 @@ ul {
 /* ── CTA FINAL servicios.html ─────────────────────────── */
 .servicios-cta-final {
   padding: 90px 0 100px;
-  background: linear-gradient(135deg, #0e2240 0%, #113a5c 50%, #0a1e36 100%);
+  background: #0B1829;
+  border-top: 1px solid rgba(255,255,255,.07);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2212,7 +2180,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(34,184,130,.10) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(34,184,130,.07) 0%, transparent 70%);
   pointer-events: none;
 }
 .servicios-cta-eyebrow {
