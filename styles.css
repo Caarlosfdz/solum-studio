@@ -1309,7 +1309,7 @@ ul {
 
 .pack-card--featured {
   border-color: rgba(34,184,130,.4);
-  background: rgba(34,184,130,.05);
+  background: #ffffff;
 }
 .pack-card--featured:hover { border-color: rgba(34,184,130,.7); }
 
