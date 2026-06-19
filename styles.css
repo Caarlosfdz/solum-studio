@@ -1603,16 +1603,16 @@ ul {
   letter-spacing: .06em; align-self: flex-start;
 }
 
-/* ── Pricing (sección oscura intencional, para dar ritmo visual) ── */
+/* ── Pricing ── */
 #precios {
-  background: #0F1419;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: #ffffff;
+  border-top: 1px solid rgba(17,21,28,0.06);
+  border-bottom: 1px solid rgba(17,21,28,0.06);
 }
 #precios .section-title,
 #precios .section-label,
-#precios .problems-title { color: #ffffff; }
-#precios .section-subtitle { color: rgba(255,255,255,0.55); }
+#precios .problems-title { color: #11151C; }
+#precios .section-subtitle { color: rgba(17,21,28,0.55); }
 
 .pricing-grid {
   display: grid;
