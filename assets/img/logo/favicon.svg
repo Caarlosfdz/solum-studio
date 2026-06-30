@@ -1,24 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="frameTop" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#06C4A8"/>
+    </linearGradient>
+    <linearGradient id="frameBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
       <stop offset="100%" stop-color="#1a1a2e"/>
     </linearGradient>
-    <linearGradient id="sTop" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="sGrad" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#06C4A8"/>
     </linearGradient>
   </defs>
 
-  <!-- Diamond outline frame -->
-  <rect x="12" y="12" width="76" height="76" rx="10" ry="10"
-        transform="rotate(45 50 50)"
-        stroke="url(#frameGrad)" stroke-width="6" fill="none"/>
+  <!-- Diamond frame top-right half (blue → teal) -->
+  <path d="M50,8 L92,50 L50,92" stroke="url(#frameTop)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Diamond frame bottom-left half (dark) -->
+  <path d="M50,92 L8,50 L50,8" stroke="#1C2030" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
-  <!-- S shape - upper piece (blue-teal gradient) -->
-  <polygon points="35,38 65,30 68,42 38,50" fill="url(#sTop)"/>
+  <!-- S shape upper bar (blue → teal) -->
+  <polygon points="33,34 67,28 70,43 36,49" fill="url(#sGrad)"/>
 
-  <!-- S shape - lower piece (dark) -->
-  <polygon points="32,58 62,50 65,62 35,70" fill="#1a1a2e"/>
+  <!-- S shape lower bar (dark) -->
+  <polygon points="30,57 64,51 67,66 33,72" fill="#1C2030"/>
 </svg>
