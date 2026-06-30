@@ -154,7 +154,7 @@
       var email = (form.elements['email'] ? form.elements['email'].value.trim() : '') || '';
       var message = (form.elements['message'] ? form.elements['message'].value.trim() : '') || '';
       var text = 'Hola, soy ' + name + ' (' + email + ').\n\n' + message;
-      var url = 'https://wa.me/34632235491?text=' + encodeURIComponent(text);
+      var url = 'https://wa.me/34711235683?text=' + encodeURIComponent(text);
       window.open(url, '_blank', 'noopener');
     });
   }
