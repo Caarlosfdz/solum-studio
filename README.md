@@ -21,8 +21,8 @@
 ## Cómo cambiar el número de WhatsApp
 
 1. Abre `lib/manifest.js` con el Bloc de notas (clic derecho → Abrir con → Bloc de notas).
-2. Busca la línea: `whatsapp: "+34632235491"`
-3. Cambia el número. También cambia `whatsappRaw: "34632235491"` (sin el +).
+2. Busca la línea: `whatsapp: "+34711235683"`
+3. Cambia el número. También cambia `whatsappRaw: "34711235683"` (sin el +).
 4. Guarda el archivo.
 5. Sube `lib/manifest.js` a Hostinger.
 
