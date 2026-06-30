@@ -1,6 +1,19 @@
 (function () {
   'use strict';
 
+  /* ── Limpiar hash de URL al cargar ── */
+  if (window.location.hash) {
+    var hashTarget = document.querySelector(window.location.hash);
+    if (hashTarget) {
+      setTimeout(function () {
+        hashTarget.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', window.location.pathname);
+      }, 100);
+    } else {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
+
   /* ── Particles ── */
   (function () {
     var canvas = document.getElementById('particles-canvas');
