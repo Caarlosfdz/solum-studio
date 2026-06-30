@@ -1135,7 +1135,11 @@
         </div>
       </div>
       <div class="contact-form-wrap">
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="7a0b9165-92ed-4fbc-a264-fef31b9c01df" />
+          <input type="hidden" name="subject" value="Nuevo contacto desde Solum Studio" />
+          <input type="hidden" name="from_name" value="Solum Studio Web" />
+          <input type="hidden" name="redirect" value="false" />
           <div class="form-group">
             <label for="formName">Nombre</label>
             <input type="text" id="formName" name="name" placeholder="Tu nombre" required />
@@ -1148,8 +1152,8 @@
             <label for="formMessage">Mensaje</label>
             <textarea id="formMessage" name="message" rows="4" placeholder="Cu&eacute;ntanos sobre tu negocio y qu&eacute; necesitas..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Enviar por WhatsApp &rarr;</button>
-          <p class="form-note">Al enviar, abrir&aacute;s WhatsApp con tu mensaje preparado.</p>
+          <button type="submit" class="btn btn-primary btn-full" id="contactSubmitBtn">Enviar mensaje &rarr;</button>
+          <p class="form-note" id="formStatus"></p>
         </form>
       </div>
     </div>
