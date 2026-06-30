@@ -145,17 +145,31 @@
     });
   });
 
-  /* ── Contact form → WhatsApp ── */
+  /* ── Contact form → Web3Forms ── */
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var name = (form.elements['name'] ? form.elements['name'].value.trim() : '') || '';
-      var email = (form.elements['email'] ? form.elements['email'].value.trim() : '') || '';
-      var message = (form.elements['message'] ? form.elements['message'].value.trim() : '') || '';
-      var text = 'Hola, soy ' + name + ' (' + email + ').\n\n' + message;
-      var url = 'https://wa.me/34711235683?text=' + encodeURIComponent(text);
-      window.open(url, '_blank', 'noopener');
+      var btn = document.getElementById('contactSubmitBtn');
+      var status = document.getElementById('formStatus');
+      var data = new FormData(form);
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
+            if (status) { status.textContent = '✓ Mensaje enviado. Te contactamos pronto.'; status.style.color = '#22B882'; }
+            form.reset();
+          } else {
+            if (status) { status.textContent = 'Error al enviar. Escríbenos por WhatsApp.'; status.style.color = '#ff6b6b'; }
+          }
+        })
+        .catch(function () {
+          if (status) { status.textContent = 'Error de conexión. Inténtalo de nuevo.'; status.style.color = '#ff6b6b'; }
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = 'Enviar mensaje →'; }
+        });
     });
   }
 
