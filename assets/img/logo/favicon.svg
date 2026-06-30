@@ -1,11 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4ade80"/>
-      <stop offset="100%" stop-color="#059669"/>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="sTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
     </linearGradient>
   </defs>
-  <rect x="6" y="6" width="36" height="36" rx="7" ry="7" transform="rotate(45 24 24)" fill="url(#g)"/>
-  <polyline points="17,22 22,29 17,36" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <polyline points="25,18 32,29 25,40" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+
+  <!-- Diamond outline frame -->
+  <rect x="12" y="12" width="76" height="76" rx="10" ry="10"
+        transform="rotate(45 50 50)"
+        stroke="url(#frameGrad)" stroke-width="6" fill="none"/>
+
+  <!-- S shape - upper piece (blue-teal gradient) -->
+  <polygon points="35,38 65,30 68,42 38,50" fill="url(#sTop)"/>
+
+  <!-- S shape - lower piece (dark) -->
+  <polygon points="32,58 62,50 65,62 35,70" fill="#1a1a2e"/>
 </svg>
