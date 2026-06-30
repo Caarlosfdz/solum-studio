@@ -299,4 +299,24 @@
     });
   }
 
+  /* ── Protección de contenido ── */
+  document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  document.addEventListener('selectstart', function (e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    e.preventDefault();
+  });
+  document.addEventListener('keydown', function (e) {
+    var k = e.key;
+    if (e.ctrlKey && (k === 'u' || k === 'U' || k === 's' || k === 'S')) { e.preventDefault(); return false; }
+    if (e.ctrlKey && e.shiftKey && (k === 'i' || k === 'I' || k === 'j' || k === 'J' || k === 'c' || k === 'C')) { e.preventDefault(); return false; }
+    if (k === 'F12') { e.preventDefault(); return false; }
+  });
+  document.querySelectorAll('img').forEach(function (img) {
+    img.setAttribute('draggable', 'false');
+    img.style.webkitUserDrag = 'none';
+    img.style.userSelect = 'none';
+    img.style.pointerEvents = 'none';
+  });
+
 })();
