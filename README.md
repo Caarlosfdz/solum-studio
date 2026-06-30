@@ -31,7 +31,7 @@
 ## Cómo cambiar el email
 
 1. Abre `lib/manifest.js`.
-2. Busca `email: "hola@solumstudio.es"`.
+2. Busca `email: "contacto@solumstudio.es"`.
 3. Cambia por tu email real.
 4. Guarda y sube.
 
